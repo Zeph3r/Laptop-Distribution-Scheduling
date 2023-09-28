@@ -23,7 +23,7 @@ def get_new_appointments():
     }
     
     # Define the URL to get appointments
-    url = f"{MICROSOFT_GRAPH_API_ENDPOINT}/me/events"
+    url = f"{MICROSOFT_GRAPH_API_ENDPOINT}/solutions/bookingBusinesses/{id}/appointments"
     
     # Send the request and get the response
     response = requests.get(url, headers=headers)
