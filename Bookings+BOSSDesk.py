@@ -21,9 +21,12 @@ def get_new_appointments():
     headers = {
         'Authorization': f'Bearer {MICROSOFT_GRAPH_API_KEY}',
     }
-    
-    # Define the URL to get appointments
-    url = f"{MICROSOFT_GRAPH_API_ENDPOINT}/solutions/bookingBusinesses/{id}/appointments"
+
+     # Get the business ID from the environment
+    business_id = os.environ.get('MICROSOFT_BOOKINGS_BUSINESS_ID')
+
+   # Define the URL to get appointments
+    url = f"{MICROSOFT_GRAPH_API_ENDPOINT}/solutions/bookingBusinesses/{business_id}/appointments"
     
     # Send the request and get the response
     response = requests.get(url, headers=headers)
