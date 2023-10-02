@@ -33,3 +33,7 @@ This repository contains a Python script for integrating Microsoft Graph with BO
 ```bash
 pip install requests python-dotenv
 ```
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
