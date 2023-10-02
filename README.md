@@ -11,7 +11,6 @@ This repository contains a Python script for integrating Microsoft Graph with BO
 - [Logging](#logging)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## Features
 
