@@ -1,2 +1,3 @@
 .env
+integration.log
 get_token.py

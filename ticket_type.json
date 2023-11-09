@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "name": "Incident",
+        "shortcut": "IN",
+        "created_at": "2017-11-15T19:58:43.313Z",
+        "updated_at": "2017-11-15T19:58:43.313Z"
+    },
+    {
+        "id": 2,
+        "name": "Feedback",
+        "shortcut": "FB",
+        "created_at": "2017-11-15T19:58:43.313Z",
+        "updated_at": "2017-11-15T19:58:43.313Z"
+    },
+    {
+        "id": 3,
+        "name": "Complaints",
+        "shortcut": "CP",
+        "created_at": "2017-11-15T19:58:43.313Z",
+        "updated_at": "2017-11-15T19:58:43.313Z"
+    },
+    {
+        "id": 4,
+        "name": "Feature Request",
+        "shortcut": "FR",
+        "created_at": "2017-11-15T19:58:43.313Z",
+        "updated_at": "2017-11-15T19:58:43.313Z"
+    },
+    {
+        "id": 5,
+        "name": "Optimization",
+        "shortcut": "OP",
+        "created_at": "2017-12-13T16:07:15.773Z",
+        "updated_at": "2018-01-30T15:44:23.217Z"
+    },
+    {
+        "id": 6,
+        "name": "Change Control",
+        "shortcut": "CC",
+        "created_at": "2017-12-28T20:00:11.993Z",
+        "updated_at": "2017-12-29T15:49:54.870Z"
+    },
+    {
+        "id": 7,
+        "name": "Projects",
+        "shortcut": "PR",
+        "created_at": "2017-12-29T15:49:43.710Z",
+        "updated_at": "2017-12-29T15:49:43.710Z"
+    },
+    {
+        "id": 8,
+        "name": "Reporting",
+        "shortcut": "REPORTING",
+        "created_at": "2018-01-30T14:14:59.037Z",
+        "updated_at": "2018-01-30T14:14:59.037Z"
+    },
+    {
+        "id": 9,
+        "name": "MD Champs",
+        "shortcut": "MD",
+        "created_at": "2018-02-23T16:47:07.137Z",
+        "updated_at": "2018-02-23T16:47:07.137Z"
+    },
+    {
+        "id": 99,
+        "name": "Service Request",
+        "shortcut": "SR",
+        "created_at": "1900-01-01T00:00:00.000Z",
+        "updated_at": "1900-01-01T00:00:00.000Z"
+    },
+    {
+        "id": 100,
+        "name": "TQI Testing ",
+        "shortcut": "TQI",
+        "created_at": "2018-06-07T18:08:07.677Z",
+        "updated_at": "2018-06-07T18:08:07.677Z"
+    },
+    {
+        "id": 101,
+        "name": "Training Request",
+        "shortcut": "EPIC TRAINING ",
+        "created_at": "2018-07-12T17:52:12.803Z",
+        "updated_at": "2018-07-12T17:52:12.803Z"
+    },
+    {
+        "id": 102,
+        "name": "IT Change Control ",
+        "shortcut": "ITCC",
+        "created_at": "2019-01-10T22:03:39.467Z",
+        "updated_at": "2019-11-08T01:35:51.867Z"
+    },
+    {
+        "id": 103,
+        "name": "Care Logistics ",
+        "shortcut": "CL",
+        "created_at": "2019-01-15T01:09:36.580Z",
+        "updated_at": "2019-01-15T01:09:36.580Z"
+    },
+    {
+        "id": 104,
+        "name": "Data Courier",
+        "shortcut": "DC",
+        "created_at": "2019-02-12T16:13:48.850Z",
+        "updated_at": "2019-02-12T16:13:48.850Z"
+    },
+    {
+        "id": 105,
+        "name": "December Code Triage",
+        "shortcut": "CT",
+        "created_at": "2019-12-09T16:47:57.333Z",
+        "updated_at": "2019-12-09T16:47:57.333Z"
+    },
+    {
+        "id": 106,
+        "name": "Audit",
+        "shortcut": "AU",
+        "created_at": "2021-02-26T19:24:46.320Z",
+        "updated_at": "2021-02-26T19:24:46.320Z"
+    }
+]
