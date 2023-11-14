@@ -153,8 +153,9 @@ def map_appointment_to_service_request(appointment):
             'ticket': {
                 'title': appointment.get('serviceName'),
                 'description': description,
-                'type_id': 99,  # Replace with the actual type ID for the ticket
-                'priority_id': 4,  # Replace with the actual priority ID for the ticket
+                'type_id': 99,  # Service Request (#SR) type ID
+                'category': 34, # Ticket category "Technical Support - Hardware - Laptop"
+                'priority_id': 4,  
                 'agent_email': staff_email,  # This assumes that the agent can be identified by email in BOSSDesk
                 'custom_fields': {
                     '75': appointment.get('id'),  # Microsoft Bookings appointment ID

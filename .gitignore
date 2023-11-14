@@ -1,3 +1,7 @@
 .env
 integration.log
 get_token.py
+ticket_type.json
+ticket.json
+custom_fields.json
+helpdesk_categories.json

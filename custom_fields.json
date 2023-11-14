@@ -1,0 +1,5381 @@
+[
+    {
+        "id": 36,
+        "name": "EmployeeID from AD",
+        "owner_class": "user",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 0,
+        "created_at": "2018-11-12T15:25:07.617Z",
+        "updated_at": "2022-05-12T18:06:54.398Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 61,
+        "name": "Estimated Work Effort",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 0,
+        "created_at": "2021-03-31T01:32:20.817Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": [
+            {
+                "id": 110,
+                "name": "XXS",
+                "parent_id": null
+            },
+            {
+                "id": 111,
+                "name": "XS",
+                "parent_id": null
+            },
+            {
+                "id": 112,
+                "name": "S",
+                "parent_id": null
+            },
+            {
+                "id": 113,
+                "name": "M",
+                "parent_id": null
+            },
+            {
+                "id": 114,
+                "name": "L",
+                "parent_id": null
+            },
+            {
+                "id": 115,
+                "name": "XL",
+                "parent_id": null
+            },
+            {
+                "id": 116,
+                "name": "XXL",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Expected Start Date",
+        "owner_class": "ticket",
+        "type_id": 6,
+        "option_source": "custom",
+        "required": false,
+        "position": 1,
+        "created_at": "2021-03-31T01:30:31.797Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 52,
+        "name": "Grady Business Owner",
+        "owner_class": "ci",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 1,
+        "created_at": "2020-07-27T16:47:22.367Z",
+        "updated_at": "2020-07-27T16:47:22.367Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 53,
+        "name": "Grady Technical Owner",
+        "owner_class": "ci",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 2,
+        "created_at": "2020-07-27T16:47:48.160Z",
+        "updated_at": "2020-07-27T16:47:48.160Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 60,
+        "name": "Expected Completion Date",
+        "owner_class": "ticket",
+        "type_id": 6,
+        "option_source": "custom",
+        "required": false,
+        "position": 2,
+        "created_at": "2021-03-31T01:31:04.323Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 54,
+        "name": "Method of Connection",
+        "owner_class": "ci",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 3,
+        "created_at": "2020-07-27T16:49:09.720Z",
+        "updated_at": "2020-07-27T16:49:09.720Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": [
+            {
+                "id": 100,
+                "name": "B2B VPN",
+                "parent_id": null
+            },
+            {
+                "id": 101,
+                "name": "ftp.gmh.edu",
+                "parent_id": null
+            },
+            {
+                "id": 102,
+                "name": "gvppr-int-tfr01",
+                "parent_id": null
+            },
+            {
+                "id": 103,
+                "name": "Inc 10",
+                "parent_id": null
+            },
+            {
+                "id": 104,
+                "name": "VL Trader",
+                "parent_id": null
+            },
+            {
+                "id": 105,
+                "name": "WAN",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Reporting Application",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 3,
+        "created_at": "2021-03-31T01:43:42.077Z",
+        "updated_at": "2021-11-03T17:32:40.147Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": [
+            {
+                "id": 117,
+                "name": "QlikView",
+                "parent_id": null
+            },
+            {
+                "id": 118,
+                "name": "QlikSense",
+                "parent_id": null
+            },
+            {
+                "id": 119,
+                "name": "SSRS",
+                "parent_id": null
+            },
+            {
+                "id": 120,
+                "name": "Cubes",
+                "parent_id": null
+            },
+            {
+                "id": 121,
+                "name": "Slicer/Dicer",
+                "parent_id": null
+            },
+            {
+                "id": 122,
+                "name": "ETL/SSIS",
+                "parent_id": null
+            },
+            {
+                "id": 123,
+                "name": "Power BI",
+                "parent_id": null
+            },
+            {
+                "id": 124,
+                "name": "Radar",
+                "parent_id": null
+            },
+            {
+                "id": 125,
+                "name": "Cogito SQL",
+                "parent_id": null
+            },
+            {
+                "id": 126,
+                "name": "Ad Hoc",
+                "parent_id": null
+            },
+            {
+                "id": 127,
+                "name": "Epic",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Data Center",
+        "owner_class": "ci",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 4,
+        "created_at": "2020-07-27T16:49:58.047Z",
+        "updated_at": "2020-07-27T16:49:58.047Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": [
+            {
+                "id": 106,
+                "name": "11E",
+                "parent_id": null
+            },
+            {
+                "id": 107,
+                "name": "QTS Metro",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Percentage Completed",
+        "owner_class": "ticket",
+        "type_id": 5,
+        "option_source": "custom",
+        "required": false,
+        "position": 4,
+        "created_at": "2018-01-22T20:48:25.713Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 111,
+            "name": "Enterprise Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 111,
+                "name": "Enterprise Intelligence"
+            },
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            },
+            {
+                "id": 120,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research"
+            },
+            {
+                "id": 121,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Data request"
+            },
+            {
+                "id": 122,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network Access"
+            },
+            {
+                "id": 124,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network- Break/Fix"
+            },
+            {
+                "id": 125,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network- Change Request/Optimization"
+            },
+            {
+                "id": 123,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network-Ad HOC"
+            },
+            {
+                "id": 301,
+                "name": "Enterprise Intelligence - Decision Support-Finance "
+            },
+            {
+                "id": 302,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Analysis"
+            },
+            {
+                "id": 303,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Break/Fix"
+            },
+            {
+                "id": 304,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Change Request/Optimization"
+            },
+            {
+                "id": 305,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F New Development "
+            },
+            {
+                "id": 306,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Regulatory"
+            },
+            {
+                "id": 307,
+                "name": "Enterprise Intelligence - Decision Support-Quality "
+            },
+            {
+                "id": 308,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Analysis"
+            },
+            {
+                "id": 309,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Break Fix"
+            },
+            {
+                "id": 310,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Change Request/Optimization"
+            },
+            {
+                "id": 311,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q New Developement"
+            },
+            {
+                "id": 312,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Regulatory"
+            },
+            {
+                "id": 313,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle"
+            },
+            {
+                "id": 314,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Analysis"
+            },
+            {
+                "id": 315,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Break/Fix"
+            },
+            {
+                "id": 316,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Change Request/Optimization"
+            },
+            {
+                "id": 317,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC New Development"
+            },
+            {
+                "id": 318,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Regulatory"
+            },
+            {
+                "id": 494,
+                "name": "Enterprise Intelligence - Slicer/Dicer"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 56,
+        "name": "Data Shared",
+        "owner_class": "ci",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 5,
+        "created_at": "2020-07-27T16:50:21.330Z",
+        "updated_at": "2020-07-27T16:54:19.267Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 19,
+        "name": "Regulatory",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 5,
+        "created_at": "2018-01-22T20:46:48.000Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": [
+            {
+                "id": 73,
+                "name": "Yes",
+                "parent_id": null
+            },
+            {
+                "id": 74,
+                "name": "No",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Organizational Goal Related",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 6,
+        "created_at": "2018-01-22T20:47:47.527Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 111,
+            "name": "Enterprise Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 111,
+                "name": "Enterprise Intelligence"
+            },
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            },
+            {
+                "id": 120,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research"
+            },
+            {
+                "id": 121,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Data request"
+            },
+            {
+                "id": 122,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network Access"
+            },
+            {
+                "id": 124,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network- Break/Fix"
+            },
+            {
+                "id": 125,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network- Change Request/Optimization"
+            },
+            {
+                "id": 123,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network-Ad HOC"
+            },
+            {
+                "id": 301,
+                "name": "Enterprise Intelligence - Decision Support-Finance "
+            },
+            {
+                "id": 302,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Analysis"
+            },
+            {
+                "id": 303,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Break/Fix"
+            },
+            {
+                "id": 304,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Change Request/Optimization"
+            },
+            {
+                "id": 305,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F New Development "
+            },
+            {
+                "id": 306,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Regulatory"
+            },
+            {
+                "id": 307,
+                "name": "Enterprise Intelligence - Decision Support-Quality "
+            },
+            {
+                "id": 308,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Analysis"
+            },
+            {
+                "id": 309,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Break Fix"
+            },
+            {
+                "id": 310,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Change Request/Optimization"
+            },
+            {
+                "id": 311,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q New Developement"
+            },
+            {
+                "id": 312,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Regulatory"
+            },
+            {
+                "id": 313,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle"
+            },
+            {
+                "id": 314,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Analysis"
+            },
+            {
+                "id": 315,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Break/Fix"
+            },
+            {
+                "id": 316,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Change Request/Optimization"
+            },
+            {
+                "id": 317,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC New Development"
+            },
+            {
+                "id": 318,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Regulatory"
+            },
+            {
+                "id": 494,
+                "name": "Enterprise Intelligence - Slicer/Dicer"
+            }
+        ],
+        "options": [
+            {
+                "id": 75,
+                "name": "Yes",
+                "parent_id": null
+            },
+            {
+                "id": 76,
+                "name": "No",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "name": "IT Managed SSO",
+        "owner_class": "ci",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 6,
+        "created_at": "2020-07-27T16:50:40.627Z",
+        "updated_at": "2020-07-27T16:54:33.227Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 67,
+        "name": "Executive Priority",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 7,
+        "created_at": "2021-07-22T12:50:12.107Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": [
+            {
+                "id": 128,
+                "name": "Yes",
+                "parent_id": null
+            },
+            {
+                "id": 129,
+                "name": "No",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Data Type",
+        "owner_class": "ci",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 7,
+        "created_at": "2021-02-01T16:36:50.360Z",
+        "updated_at": "2021-02-01T16:36:50.360Z",
+        "ci_type": {
+            "id": 113,
+            "name": "3rd Party Inventory"
+        },
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": [
+            {
+                "id": 108,
+                "name": "PHI",
+                "parent_id": null
+            },
+            {
+                "id": 109,
+                "name": "Non PHI",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Allocated To",
+        "owner_class": "ci",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 8,
+        "created_at": "2021-11-19T21:51:33.263Z",
+        "updated_at": "2021-11-19T21:51:33.263Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 1,
+        "name": "Requesting Team",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 8,
+        "created_at": "2018-01-02T17:16:28.310Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 2,
+                "name": "3M",
+                "parent_id": null
+            },
+            {
+                "id": 3,
+                "name": "ADT",
+                "parent_id": null
+            },
+            {
+                "id": 4,
+                "name": "AMB EMR",
+                "parent_id": null
+            },
+            {
+                "id": 5,
+                "name": "ASAP",
+                "parent_id": null
+            },
+            {
+                "id": 6,
+                "name": "Anesthesia",
+                "parent_id": null
+            },
+            {
+                "id": 7,
+                "name": "Beacon",
+                "parent_id": null
+            },
+            {
+                "id": 8,
+                "name": "Beaker",
+                "parent_id": null
+            },
+            {
+                "id": 9,
+                "name": "Billing",
+                "parent_id": null
+            },
+            {
+                "id": 10,
+                "name": "CPOE",
+                "parent_id": null
+            },
+            {
+                "id": 11,
+                "name": "Cadence",
+                "parent_id": null
+            },
+            {
+                "id": 12,
+                "name": "ClinDoc",
+                "parent_id": null
+            },
+            {
+                "id": 13,
+                "name": "Clinical Informatics",
+                "parent_id": null
+            },
+            {
+                "id": 14,
+                "name": "Community Connect ",
+                "parent_id": null
+            },
+            {
+                "id": 15,
+                "name": "Epic Meaningful Use ",
+                "parent_id": null
+            },
+            {
+                "id": 16,
+                "name": "HIM",
+                "parent_id": null
+            },
+            {
+                "id": 17,
+                "name": "Interfaces",
+                "parent_id": null
+            },
+            {
+                "id": 18,
+                "name": "LDA (Legacy Data Access)",
+                "parent_id": null
+            },
+            {
+                "id": 19,
+                "name": "Lab",
+                "parent_id": null
+            },
+            {
+                "id": 20,
+                "name": "OPTime",
+                "parent_id": null
+            },
+            {
+                "id": 21,
+                "name": "Radiant",
+                "parent_id": null
+            },
+            {
+                "id": 22,
+                "name": "Reporting ",
+                "parent_id": null
+            },
+            {
+                "id": 23,
+                "name": "Server Team",
+                "parent_id": null
+            },
+            {
+                "id": 24,
+                "name": "Willow",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Allocate Date",
+        "owner_class": "ci",
+        "type_id": 6,
+        "option_source": "custom",
+        "required": false,
+        "position": 9,
+        "created_at": "2021-11-19T21:51:53.827Z",
+        "updated_at": "2021-11-19T21:51:53.827Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 2,
+        "name": "Location ",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 9,
+        "created_at": "2018-01-02T17:58:05.820Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": [
+            {
+                "id": 25,
+                "name": "10 Park Place",
+                "parent_id": null
+            },
+            {
+                "id": 26,
+                "name": "263 Decatur st (IT building )",
+                "parent_id": null
+            },
+            {
+                "id": 27,
+                "name": "ASA Yancy",
+                "parent_id": null
+            },
+            {
+                "id": 28,
+                "name": "Brookhaven",
+                "parent_id": null
+            },
+            {
+                "id": 29,
+                "name": "Butler Parking Deck ",
+                "parent_id": null
+            },
+            {
+                "id": 30,
+                "name": "C.H.O.A",
+                "parent_id": null
+            },
+            {
+                "id": 31,
+                "name": "Camp Creek ",
+                "parent_id": null
+            },
+            {
+                "id": 32,
+                "name": "Central Refill ",
+                "parent_id": null
+            },
+            {
+                "id": 33,
+                "name": "Crestview",
+                "parent_id": null
+            },
+            {
+                "id": 34,
+                "name": "DDU-Coca Cola Place ",
+                "parent_id": null
+            },
+            {
+                "id": 35,
+                "name": "Docustore ",
+                "parent_id": null
+            },
+            {
+                "id": 36,
+                "name": "EMS Building (memorial dr)",
+                "parent_id": null
+            },
+            {
+                "id": 37,
+                "name": "East Point",
+                "parent_id": null
+            },
+            {
+                "id": 38,
+                "name": "Georgia Hall",
+                "parent_id": null
+            },
+            {
+                "id": 39,
+                "name": "Glenn Building ",
+                "parent_id": null
+            },
+            {
+                "id": 40,
+                "name": "Grady Health Foundation ",
+                "parent_id": null
+            },
+            {
+                "id": 41,
+                "name": "GWCC (Georgia World Congress Center)",
+                "parent_id": null
+            },
+            {
+                "id": 42,
+                "name": "Hurt Building ",
+                "parent_id": null
+            },
+            {
+                "id": 43,
+                "name": "IDP Ponce Center ",
+                "parent_id": null
+            },
+            {
+                "id": 44,
+                "name": "Kirkwood",
+                "parent_id": null
+            },
+            {
+                "id": 45,
+                "name": "Main Grady",
+                "parent_id": null
+            },
+            {
+                "id": 46,
+                "name": "Maloof building",
+                "parent_id": null
+            },
+            {
+                "id": 47,
+                "name": "Morehouse Community Connect (HowellMill)",
+                "parent_id": null
+            },
+            {
+                "id": 48,
+                "name": "Morehouse Community Connect( Lee Street)",
+                "parent_id": null
+            },
+            {
+                "id": 49,
+                "name": "North Fulton",
+                "parent_id": null
+            },
+            {
+                "id": 50,
+                "name": "Piedmont Hall",
+                "parent_id": null
+            },
+            {
+                "id": 51,
+                "name": "Radiation Oncology",
+                "parent_id": null
+            },
+            {
+                "id": 52,
+                "name": "Remote ",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Extension or Phone Number",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 10,
+        "created_at": "2018-01-02T20:53:35.760Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 5,
+        "name": "Destination Environment",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 11,
+        "created_at": "2018-01-02T21:29:58.060Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 53,
+                "name": "TST",
+                "parent_id": null
+            },
+            {
+                "id": 54,
+                "name": "MST",
+                "parent_id": null
+            },
+            {
+                "id": 55,
+                "name": "PRD",
+                "parent_id": null
+            },
+            {
+                "id": 56,
+                "name": "PRD, TST, MST",
+                "parent_id": null
+            },
+            {
+                "id": 57,
+                "name": "REL",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Emergent Change (Y/N)",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 12,
+        "created_at": "2018-01-02T21:30:48.933Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 58,
+                "name": "Yes",
+                "parent_id": null
+            },
+            {
+                "id": 59,
+                "name": "No",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Type of Change",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 13,
+        "created_at": "2018-01-02T21:31:17.223Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 8,
+        "name": "Update Method",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 14,
+        "created_at": "2018-01-02T21:32:16.893Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 60,
+                "name": "Data Courier",
+                "parent_id": null
+            },
+            {
+                "id": 61,
+                "name": "Manual Build",
+                "parent_id": null
+            },
+            {
+                "id": 62,
+                "name": "J Import",
+                "parent_id": null
+            },
+            {
+                "id": 63,
+                "name": "RA",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Change Made By",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 15,
+        "created_at": "2018-01-02T21:32:57.260Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 10,
+        "name": "Testing Level",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 16,
+        "created_at": "2018-01-02T21:33:52.213Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 64,
+                "name": "Unit Testing",
+                "parent_id": null
+            },
+            {
+                "id": 65,
+                "name": "Integrated Testing ",
+                "parent_id": null
+            },
+            {
+                "id": 66,
+                "name": "User Acceptance Testing ",
+                "parent_id": null
+            },
+            {
+                "id": 67,
+                "name": "No Testing Required",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "TQI Approval (Only if the above is Integrated testing)",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 17,
+        "created_at": "2018-01-02T21:35:28.453Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 68,
+                "name": "Approved by TQI team ",
+                "parent_id": null
+            },
+            {
+                "id": 69,
+                "name": "Not Approved by TQI Team ",
+                "parent_id": null
+            },
+            {
+                "id": 70,
+                "name": "Approval not required",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Tip Sheet",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": true,
+        "position": 18,
+        "created_at": "2018-01-02T21:35:55.583Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": [
+            {
+                "id": 71,
+                "name": "Yes (Attached)",
+                "parent_id": null
+            },
+            {
+                "id": 72,
+                "name": "No",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Status Update",
+        "owner_class": "ticket",
+        "type_id": 2,
+        "option_source": "custom",
+        "required": false,
+        "position": 19,
+        "created_at": "2018-01-22T20:48:50.863Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 111,
+            "name": "Enterprise Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 111,
+                "name": "Enterprise Intelligence"
+            },
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            },
+            {
+                "id": 120,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research"
+            },
+            {
+                "id": 121,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Data request"
+            },
+            {
+                "id": 122,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network Access"
+            },
+            {
+                "id": 124,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network- Break/Fix"
+            },
+            {
+                "id": 125,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network- Change Request/Optimization"
+            },
+            {
+                "id": 123,
+                "name": "Enterprise Intelligence - Clinical Intelligence-Research - Research Network-Ad HOC"
+            },
+            {
+                "id": 301,
+                "name": "Enterprise Intelligence - Decision Support-Finance "
+            },
+            {
+                "id": 302,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Analysis"
+            },
+            {
+                "id": 303,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Break/Fix"
+            },
+            {
+                "id": 304,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Change Request/Optimization"
+            },
+            {
+                "id": 305,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F New Development "
+            },
+            {
+                "id": 306,
+                "name": "Enterprise Intelligence - Decision Support-Finance  - DS-F Regulatory"
+            },
+            {
+                "id": 307,
+                "name": "Enterprise Intelligence - Decision Support-Quality "
+            },
+            {
+                "id": 308,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Analysis"
+            },
+            {
+                "id": 309,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Break Fix"
+            },
+            {
+                "id": 310,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Change Request/Optimization"
+            },
+            {
+                "id": 311,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q New Developement"
+            },
+            {
+                "id": 312,
+                "name": "Enterprise Intelligence - Decision Support-Quality  - DS-Q Regulatory"
+            },
+            {
+                "id": 313,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle"
+            },
+            {
+                "id": 314,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Analysis"
+            },
+            {
+                "id": 315,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Break/Fix"
+            },
+            {
+                "id": 316,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Change Request/Optimization"
+            },
+            {
+                "id": 317,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC New Development"
+            },
+            {
+                "id": 318,
+                "name": "Enterprise Intelligence - Decision Support-Revenue Cycle - DS-RC Regulatory"
+            },
+            {
+                "id": 494,
+                "name": "Enterprise Intelligence - Slicer/Dicer"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 23,
+        "name": "Room Number / Dept.",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 20,
+        "created_at": "2018-01-29T21:27:11.317Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 26,
+        "name": "On-Call Support",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 21,
+        "created_at": "2018-03-30T15:56:27.597Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    },
+    {
+        "id": 27,
+        "name": "Has security team approved affected INI",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 22,
+        "created_at": "2018-07-19T20:07:25.477Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 30,
+        "name": "Who is the project manager?",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 23,
+        "created_at": "2018-08-28T17:46:40.870Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 428,
+            "name": "Epic Application Support - TQI"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 31,
+        "name": "Have you completed a test run of your script, with all teams represented ?",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 24,
+        "created_at": "2018-08-28T17:47:10.147Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 428,
+            "name": "Epic Application Support - TQI"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 32,
+        "name": "Is a finalized copy of your script attached ?",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 25,
+        "created_at": "2018-08-28T17:47:24.333Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 274,
+            "name": "Change Control "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 274,
+                "name": "Change Control "
+            },
+            {
+                "id": 275,
+                "name": "Change Control  - Epic Change Control "
+            },
+            {
+                "id": 276,
+                "name": "Change Control  - Epic Change Control  - Ambulatory Change Control"
+            },
+            {
+                "id": 277,
+                "name": "Change Control  - Epic Change Control  - Community Connect Change Control "
+            },
+            {
+                "id": 278,
+                "name": "Change Control  - Epic Change Control  - Database Change Control"
+            },
+            {
+                "id": 279,
+                "name": "Change Control  - Epic Change Control  - Emergency / ASAP Change Control "
+            },
+            {
+                "id": 480,
+                "name": "Change Control  - Epic Change Control  - EPIC Healthy Planet Change Control"
+            },
+            {
+                "id": 443,
+                "name": "Change Control  - Epic Change Control  - EPIC Radiant Change Control"
+            },
+            {
+                "id": 280,
+                "name": "Change Control  - Epic Change Control  - HIM Change Control"
+            },
+            {
+                "id": 281,
+                "name": "Change Control  - Epic Change Control  - Hospital Billing Change Control "
+            },
+            {
+                "id": 282,
+                "name": "Change Control  - Epic Change Control  - Inpatient Clinical Documentation Change Control"
+            },
+            {
+                "id": 283,
+                "name": "Change Control  - Epic Change Control  - Inpatient CPOE Change Control "
+            },
+            {
+                "id": 284,
+                "name": "Change Control  - Epic Change Control  - Inpatient Pharmacy Change Control "
+            },
+            {
+                "id": 285,
+                "name": "Change Control  - Epic Change Control  - Interfaces Change Control "
+            },
+            {
+                "id": 287,
+                "name": "Change Control  - Epic Change Control  - Lab Change Control "
+            },
+            {
+                "id": 286,
+                "name": "Change Control  - Epic Change Control  - Lab(Beaker)Change Control "
+            },
+            {
+                "id": 288,
+                "name": "Change Control  - Epic Change Control  - Meaningful Use Change Control "
+            },
+            {
+                "id": 289,
+                "name": "Change Control  - Epic Change Control  - Oncology (Beacon) Change Control "
+            },
+            {
+                "id": 290,
+                "name": "Change Control  - Epic Change Control  - OR / Anesthesia Change Control"
+            },
+            {
+                "id": 291,
+                "name": "Change Control  - Epic Change Control  - Patient Access Change Control"
+            },
+            {
+                "id": 292,
+                "name": "Change Control  - Epic Change Control  - Professional Billing Change Control "
+            },
+            {
+                "id": 293,
+                "name": "Change Control  - Epic Change Control  - Radiology / Cardiology Change Control "
+            },
+            {
+                "id": 294,
+                "name": "Change Control  - Epic Change Control  - Reporting Change Control "
+            },
+            {
+                "id": 295,
+                "name": "Change Control  - Epic Change Control  - Scheduling Change Control "
+            },
+            {
+                "id": 296,
+                "name": "Change Control  - Epic Change Control  - Technical Change Control "
+            },
+            {
+                "id": 440,
+                "name": "Change Control  - IS Infrastructure"
+            },
+            {
+                "id": 442,
+                "name": "Change Control  - IS Infrastructure - IS Cybersecurity "
+            },
+            {
+                "id": 441,
+                "name": "Change Control  - IS Infrastructure - IS Network"
+            },
+            {
+                "id": 297,
+                "name": "Change Control  - Server Changes "
+            },
+            {
+                "id": 298,
+                "name": "Change Control  - Server Changes  - New Server Install "
+            },
+            {
+                "id": 299,
+                "name": "Change Control  - Server Changes  - Scheduled Server Maintenance "
+            },
+            {
+                "id": 300,
+                "name": "Change Control  - Server Changes  - Test Server Analysis"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 33,
+        "name": "Have you requested an HIM coding resource ?",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 26,
+        "created_at": "2018-08-28T17:47:44.887Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 428,
+            "name": "Epic Application Support - TQI"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 34,
+        "name": "Project-Go-Live date ",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 27,
+        "created_at": "2018-08-28T17:48:06.177Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 428,
+            "name": "Epic Application Support - TQI"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 35,
+        "name": "Employee ID number ",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": true,
+        "position": 28,
+        "created_at": "2018-10-26T16:18:00.290Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 461,
+            "name": "Telecom Tier I - Phone Number Update"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 461,
+                "name": "Telecom Tier I - Phone Number Update"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 37,
+        "name": "Serial number",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 29,
+        "created_at": "2019-03-27T18:55:36.697Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 136,
+            "name": "Technical Support - Lenovo Support"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 136,
+                "name": "Technical Support - Lenovo Support"
+            },
+            {
+                "id": 137,
+                "name": "Technical Support - Lenovo Support - M92"
+            },
+            {
+                "id": 138,
+                "name": "Technical Support - Lenovo Support - M93"
+            },
+            {
+                "id": 139,
+                "name": "Technical Support - Lenovo Support - T440"
+            },
+            {
+                "id": 140,
+                "name": "Technical Support - Lenovo Support - Thinpad X230"
+            },
+            {
+                "id": 141,
+                "name": "Technical Support - Lenovo Support - X131E"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 42,
+        "name": "Work Effort",
+        "owner_class": "ticket",
+        "type_id": 11,
+        "option_source": "custom",
+        "required": false,
+        "position": 30,
+        "created_at": "2019-09-26T13:26:46.277Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 9,
+            "name": "Epic Application Support"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 9,
+                "name": "Epic Application Support"
+            },
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            },
+            {
+                "id": 492,
+                "name": "Epic Application Support - Clinical Informatics "
+            },
+            {
+                "id": 550,
+                "name": "Epic Application Support - Clinical Informatics  - Analysis"
+            },
+            {
+                "id": 551,
+                "name": "Epic Application Support - Clinical Informatics  - Break/Fix"
+            },
+            {
+                "id": 552,
+                "name": "Epic Application Support - Clinical Informatics  - Change Request/Optimization "
+            },
+            {
+                "id": 553,
+                "name": "Epic Application Support - Clinical Informatics  - New Development"
+            },
+            {
+                "id": 491,
+                "name": "Epic Application Support - Epic  Hospital Billing -PFS"
+            },
+            {
+                "id": 535,
+                "name": "Epic Application Support - Epic BPA"
+            },
+            {
+                "id": 10,
+                "name": "Epic Application Support - Epic Clinical"
+            },
+            {
+                "id": 222,
+                "name": "Epic Application Support - Epic Clinical - Behavioral Health"
+            },
+            {
+                "id": 223,
+                "name": "Epic Application Support - Epic Clinical - Clinical training "
+            },
+            {
+                "id": 14,
+                "name": "Epic Application Support - Epic Clinical - Epic Ambulatory"
+            },
+            {
+                "id": 13,
+                "name": "Epic Application Support - Epic Clinical - Epic ASAP"
+            },
+            {
+                "id": 225,
+                "name": "Epic Application Support - Epic Clinical - EPIC Care Link"
+            },
+            {
+                "id": 426,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet"
+            },
+            {
+                "id": 479,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet - Epic Regulatory/Quality "
+            },
+            {
+                "id": 226,
+                "name": "Epic Application Support - Epic Clinical - E-Signature Document Corrections"
+            },
+            {
+                "id": 227,
+                "name": "Epic Application Support - Epic Clinical - Haiku/Canto Support"
+            },
+            {
+                "id": 228,
+                "name": "Epic Application Support - Epic Clinical - Oncology(Beacon)"
+            },
+            {
+                "id": 229,
+                "name": "Epic Application Support - Epic Community Connect"
+            },
+            {
+                "id": 224,
+                "name": "Epic Application Support - Epic Community Connect - Community connect"
+            },
+            {
+                "id": 230,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Clinical"
+            },
+            {
+                "id": 231,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC other "
+            },
+            {
+                "id": 232,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Rev Cycle"
+            },
+            {
+                "id": 486,
+                "name": "Epic Application Support - Epic Go Live"
+            },
+            {
+                "id": 11,
+                "name": "Epic Application Support - Epic Inpatient"
+            },
+            {
+                "id": 220,
+                "name": "Epic Application Support - Epic Inpatient - Epic Anesthesia"
+            },
+            {
+                "id": 17,
+                "name": "Epic Application Support - Epic Inpatient - Epic ClinDoc"
+            },
+            {
+                "id": 18,
+                "name": "Epic Application Support - Epic Inpatient - Epic CPOE"
+            },
+            {
+                "id": 16,
+                "name": "Epic Application Support - Epic Inpatient - Epic OpTime"
+            },
+            {
+                "id": 19,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant"
+            },
+            {
+                "id": 516,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant - Imaging Decision Support"
+            },
+            {
+                "id": 15,
+                "name": "Epic Application Support - Epic Inpatient - Epic Willow"
+            },
+            {
+                "id": 249,
+                "name": "Epic Application Support - Epic Lab(Beaker)"
+            },
+            {
+                "id": 250,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Lab (beaker)"
+            },
+            {
+                "id": 438,
+                "name": "Epic Application Support - Epic Lab(Beaker) - New Test Edition"
+            },
+            {
+                "id": 439,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Update/ Modified Test"
+            },
+            {
+                "id": 532,
+                "name": "Epic Application Support - Epic Professional Billing "
+            },
+            {
+                "id": 478,
+                "name": "Epic Application Support - Epic Regulatory/Quality "
+            },
+            {
+                "id": 12,
+                "name": "Epic Application Support - Epic Revenue Cycle"
+            },
+            {
+                "id": 21,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic ADT"
+            },
+            {
+                "id": 23,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Cadence"
+            },
+            {
+                "id": 424,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic CDM Management"
+            },
+            {
+                "id": 445,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Claims"
+            },
+            {
+                "id": 22,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic HIM"
+            },
+            {
+                "id": 20,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Hospital Billing"
+            },
+            {
+                "id": 446,
+                "name": "Epic Application Support - Epic Training "
+            },
+            {
+                "id": 546,
+                "name": "Epic Application Support - E-Prescribing"
+            },
+            {
+                "id": 547,
+                "name": "Epic Application Support - E-Prescribing - E-Prescribe"
+            },
+            {
+                "id": 548,
+                "name": "Epic Application Support - E-Prescribing - Imprivata Maintenance"
+            },
+            {
+                "id": 496,
+                "name": "Epic Application Support - Immunization taskforce"
+            },
+            {
+                "id": 542,
+                "name": "Epic Application Support - MyChart"
+            },
+            {
+                "id": 534,
+                "name": "Epic Application Support - Orderset/Smartset"
+            },
+            {
+                "id": 488,
+                "name": "Epic Application Support - Project Team "
+            },
+            {
+                "id": 525,
+                "name": "Epic Application Support - Telehealth Video"
+            },
+            {
+                "id": 521,
+                "name": "Epic Application Support - Telehealth Video - Video Visit"
+            }
+        ],
+        "options": [
+            {
+                "id": 77,
+                "name": "High Effort",
+                "parent_id": null
+            },
+            {
+                "id": 78,
+                "name": "Medium Effort",
+                "parent_id": null
+            },
+            {
+                "id": 79,
+                "name": "Low Effort",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Severity",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 31,
+        "created_at": "2019-11-07T04:36:45.277Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 493,
+            "name": "Peoplesoft ERP"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 493,
+                "name": "Peoplesoft ERP"
+            },
+            {
+                "id": 257,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain"
+            },
+            {
+                "id": 259,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Asset Management"
+            },
+            {
+                "id": 260,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Enhancements"
+            },
+            {
+                "id": 261,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP General Ledger"
+            },
+            {
+                "id": 262,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP General Question"
+            },
+            {
+                "id": 263,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Interface"
+            },
+            {
+                "id": 264,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Inventory"
+            },
+            {
+                "id": 265,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Project Costing"
+            },
+            {
+                "id": 266,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Purchasing"
+            },
+            {
+                "id": 267,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Reporting "
+            },
+            {
+                "id": 268,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Repository"
+            },
+            {
+                "id": 269,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Security"
+            },
+            {
+                "id": 270,
+                "name": "Peoplesoft ERP - Peoplesoft Financials/Supply Chain - PS ERP Technical"
+            },
+            {
+                "id": 258,
+                "name": "Peoplesoft ERP - PS ERP Accounts Payable"
+            }
+        ],
+        "options": [
+            {
+                "id": 80,
+                "name": "Critical",
+                "parent_id": null
+            },
+            {
+                "id": 81,
+                "name": "Major",
+                "parent_id": null
+            },
+            {
+                "id": 82,
+                "name": "Moderate",
+                "parent_id": null
+            },
+            {
+                "id": 83,
+                "name": "Minor",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Severity",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 32,
+        "created_at": "2019-11-07T04:43:19.530Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 2,
+            "name": "Peoplesoft HR "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 2,
+                "name": "Peoplesoft HR "
+            },
+            {
+                "id": 251,
+                "name": "Peoplesoft HR  - PeopleSoft Compensation "
+            },
+            {
+                "id": 252,
+                "name": "Peoplesoft HR  - PeopleSoft Compensation  - Compensation support"
+            },
+            {
+                "id": 253,
+                "name": "Peoplesoft HR  - PeopleSoft Compensation  - Device Group"
+            },
+            {
+                "id": 254,
+                "name": "Peoplesoft HR  - PeopleSoft Compensation  - Functional Access profile/License Type"
+            },
+            {
+                "id": 255,
+                "name": "Peoplesoft HR  - PeopleSoft Compensation  - Pay Rule"
+            },
+            {
+                "id": 256,
+                "name": "Peoplesoft HR  - PeopleSoft Compensation  - Time Keeper"
+            },
+            {
+                "id": 271,
+                "name": "Peoplesoft HR  - People-soft HR Functional"
+            },
+            {
+                "id": 273,
+                "name": "Peoplesoft HR  - People-soft HR Functional - People soft-HR-Technical"
+            },
+            {
+                "id": 272,
+                "name": "Peoplesoft HR  - People-soft HR Functional - People-soft General"
+            }
+        ],
+        "options": [
+            {
+                "id": 84,
+                "name": "Critical",
+                "parent_id": null
+            },
+            {
+                "id": 85,
+                "name": "Major",
+                "parent_id": null
+            },
+            {
+                "id": 86,
+                "name": "Moderate",
+                "parent_id": null
+            },
+            {
+                "id": 87,
+                "name": "Minor",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Epic-Go-Live",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 33,
+        "created_at": "2019-11-07T17:40:58.547Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 9,
+            "name": "Epic Application Support"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 9,
+                "name": "Epic Application Support"
+            },
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            },
+            {
+                "id": 492,
+                "name": "Epic Application Support - Clinical Informatics "
+            },
+            {
+                "id": 550,
+                "name": "Epic Application Support - Clinical Informatics  - Analysis"
+            },
+            {
+                "id": 551,
+                "name": "Epic Application Support - Clinical Informatics  - Break/Fix"
+            },
+            {
+                "id": 552,
+                "name": "Epic Application Support - Clinical Informatics  - Change Request/Optimization "
+            },
+            {
+                "id": 553,
+                "name": "Epic Application Support - Clinical Informatics  - New Development"
+            },
+            {
+                "id": 491,
+                "name": "Epic Application Support - Epic  Hospital Billing -PFS"
+            },
+            {
+                "id": 535,
+                "name": "Epic Application Support - Epic BPA"
+            },
+            {
+                "id": 10,
+                "name": "Epic Application Support - Epic Clinical"
+            },
+            {
+                "id": 222,
+                "name": "Epic Application Support - Epic Clinical - Behavioral Health"
+            },
+            {
+                "id": 223,
+                "name": "Epic Application Support - Epic Clinical - Clinical training "
+            },
+            {
+                "id": 14,
+                "name": "Epic Application Support - Epic Clinical - Epic Ambulatory"
+            },
+            {
+                "id": 13,
+                "name": "Epic Application Support - Epic Clinical - Epic ASAP"
+            },
+            {
+                "id": 225,
+                "name": "Epic Application Support - Epic Clinical - EPIC Care Link"
+            },
+            {
+                "id": 426,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet"
+            },
+            {
+                "id": 479,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet - Epic Regulatory/Quality "
+            },
+            {
+                "id": 226,
+                "name": "Epic Application Support - Epic Clinical - E-Signature Document Corrections"
+            },
+            {
+                "id": 227,
+                "name": "Epic Application Support - Epic Clinical - Haiku/Canto Support"
+            },
+            {
+                "id": 228,
+                "name": "Epic Application Support - Epic Clinical - Oncology(Beacon)"
+            },
+            {
+                "id": 229,
+                "name": "Epic Application Support - Epic Community Connect"
+            },
+            {
+                "id": 224,
+                "name": "Epic Application Support - Epic Community Connect - Community connect"
+            },
+            {
+                "id": 230,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Clinical"
+            },
+            {
+                "id": 231,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC other "
+            },
+            {
+                "id": 232,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Rev Cycle"
+            },
+            {
+                "id": 486,
+                "name": "Epic Application Support - Epic Go Live"
+            },
+            {
+                "id": 11,
+                "name": "Epic Application Support - Epic Inpatient"
+            },
+            {
+                "id": 220,
+                "name": "Epic Application Support - Epic Inpatient - Epic Anesthesia"
+            },
+            {
+                "id": 17,
+                "name": "Epic Application Support - Epic Inpatient - Epic ClinDoc"
+            },
+            {
+                "id": 18,
+                "name": "Epic Application Support - Epic Inpatient - Epic CPOE"
+            },
+            {
+                "id": 16,
+                "name": "Epic Application Support - Epic Inpatient - Epic OpTime"
+            },
+            {
+                "id": 19,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant"
+            },
+            {
+                "id": 516,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant - Imaging Decision Support"
+            },
+            {
+                "id": 15,
+                "name": "Epic Application Support - Epic Inpatient - Epic Willow"
+            },
+            {
+                "id": 249,
+                "name": "Epic Application Support - Epic Lab(Beaker)"
+            },
+            {
+                "id": 250,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Lab (beaker)"
+            },
+            {
+                "id": 438,
+                "name": "Epic Application Support - Epic Lab(Beaker) - New Test Edition"
+            },
+            {
+                "id": 439,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Update/ Modified Test"
+            },
+            {
+                "id": 532,
+                "name": "Epic Application Support - Epic Professional Billing "
+            },
+            {
+                "id": 478,
+                "name": "Epic Application Support - Epic Regulatory/Quality "
+            },
+            {
+                "id": 12,
+                "name": "Epic Application Support - Epic Revenue Cycle"
+            },
+            {
+                "id": 21,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic ADT"
+            },
+            {
+                "id": 23,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Cadence"
+            },
+            {
+                "id": 424,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic CDM Management"
+            },
+            {
+                "id": 445,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Claims"
+            },
+            {
+                "id": 22,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic HIM"
+            },
+            {
+                "id": 20,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Hospital Billing"
+            },
+            {
+                "id": 446,
+                "name": "Epic Application Support - Epic Training "
+            },
+            {
+                "id": 546,
+                "name": "Epic Application Support - E-Prescribing"
+            },
+            {
+                "id": 547,
+                "name": "Epic Application Support - E-Prescribing - E-Prescribe"
+            },
+            {
+                "id": 548,
+                "name": "Epic Application Support - E-Prescribing - Imprivata Maintenance"
+            },
+            {
+                "id": 496,
+                "name": "Epic Application Support - Immunization taskforce"
+            },
+            {
+                "id": 542,
+                "name": "Epic Application Support - MyChart"
+            },
+            {
+                "id": 534,
+                "name": "Epic Application Support - Orderset/Smartset"
+            },
+            {
+                "id": 488,
+                "name": "Epic Application Support - Project Team "
+            },
+            {
+                "id": 525,
+                "name": "Epic Application Support - Telehealth Video"
+            },
+            {
+                "id": 521,
+                "name": "Epic Application Support - Telehealth Video - Video Visit"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 47,
+        "name": "Work Effort",
+        "owner_class": "ticket",
+        "type_id": 11,
+        "option_source": "custom",
+        "required": false,
+        "position": 34,
+        "created_at": "2020-01-27T17:11:32.103Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 466,
+            "name": "1_Intake "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 466,
+                "name": "1_Intake "
+            },
+            {
+                "id": 468,
+                "name": "1_Intake  - Ambulatory Optimization"
+            },
+            {
+                "id": 476,
+                "name": "1_Intake  - ASAP Governance"
+            },
+            {
+                "id": 469,
+                "name": "1_Intake  - Clinical Information Council (CIC)"
+            },
+            {
+                "id": 470,
+                "name": "1_Intake  - Clinical Systems Executive Council (CSEC)"
+            },
+            {
+                "id": 549,
+                "name": "1_Intake  - Community Connect Governance"
+            },
+            {
+                "id": 490,
+                "name": "1_Intake  - Digital Engagement Solutions"
+            },
+            {
+                "id": 471,
+                "name": "1_Intake  - Lab Governance"
+            },
+            {
+                "id": 467,
+                "name": "1_Intake  - MD Champs"
+            },
+            {
+                "id": 537,
+                "name": "1_Intake  - Oncology Governance"
+            },
+            {
+                "id": 474,
+                "name": "1_Intake  - Pharmacy Governance"
+            },
+            {
+                "id": 475,
+                "name": "1_Intake  - Population Health Governance"
+            },
+            {
+                "id": 472,
+                "name": "1_Intake  - Radiology Governance"
+            },
+            {
+                "id": 515,
+                "name": "1_Intake  - RevCycle Governace"
+            },
+            {
+                "id": 473,
+                "name": "1_Intake  - Surgical Governance"
+            },
+            {
+                "id": 554,
+                "name": "1_Intake  - Women's Service IT Governance"
+            }
+        ],
+        "options": [
+            {
+                "id": 88,
+                "name": "High Effort",
+                "parent_id": null
+            },
+            {
+                "id": 89,
+                "name": "Medium Effort",
+                "parent_id": null
+            },
+            {
+                "id": 90,
+                "name": "Low Effort ",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Work Effort",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 35,
+        "created_at": "2020-01-30T13:59:57.183Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 319,
+            "name": "Clinical Decision Support "
+        },
+        "helpdesk_categories": [
+            {
+                "id": 319,
+                "name": "Clinical Decision Support "
+            },
+            {
+                "id": 320,
+                "name": "Clinical Decision Support  - CDS General "
+            },
+            {
+                "id": 321,
+                "name": "Clinical Decision Support  - Quality Improvement"
+            }
+        ],
+        "options": [
+            {
+                "id": 91,
+                "name": "High Effort ",
+                "parent_id": null
+            },
+            {
+                "id": 92,
+                "name": "Medium Effort",
+                "parent_id": null
+            },
+            {
+                "id": 93,
+                "name": "Low Effort",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Work Effort",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 36,
+        "created_at": "2020-01-30T14:00:54.760Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 167,
+            "name": "Radiology Team"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 167,
+                "name": "Radiology Team"
+            },
+            {
+                "id": 171,
+                "name": "Radiology Team - Radiology"
+            },
+            {
+                "id": 172,
+                "name": "Radiology Team - Radiology - Centricity QS"
+            },
+            {
+                "id": 173,
+                "name": "Radiology Team - Radiology - Radiology General"
+            },
+            {
+                "id": 175,
+                "name": "Radiology Team - Radiology - Radiology Hardware"
+            },
+            {
+                "id": 174,
+                "name": "Radiology Team - Radiology - Radiology Software"
+            },
+            {
+                "id": 533,
+                "name": "Radiology Team - SectraPACS Go-live "
+            }
+        ],
+        "options": [
+            {
+                "id": 94,
+                "name": "High Effort",
+                "parent_id": null
+            },
+            {
+                "id": 95,
+                "name": "Medium Effort",
+                "parent_id": null
+            },
+            {
+                "id": 96,
+                "name": "Low Effort ",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Work Effort ",
+        "owner_class": "ticket",
+        "type_id": 8,
+        "option_source": "custom",
+        "required": false,
+        "position": 37,
+        "created_at": "2020-01-30T14:03:11.913Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 464,
+            "name": "Care Logistics"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 464,
+                "name": "Care Logistics"
+            }
+        ],
+        "options": [
+            {
+                "id": 97,
+                "name": "High Effort ",
+                "parent_id": null
+            },
+            {
+                "id": 98,
+                "name": "Medium Effort ",
+                "parent_id": null
+            },
+            {
+                "id": 99,
+                "name": "Low Effort ",
+                "parent_id": null
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Blocked",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 38,
+        "created_at": "2021-04-26T02:12:41.340Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 64,
+        "name": "Intake Document Complete",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 39,
+        "created_at": "2021-04-26T02:13:07.417Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 65,
+        "name": "Technical Specification Complete",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 40,
+        "created_at": "2021-04-26T02:13:59.143Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 66,
+        "name": "Testing Documentation Complete",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 41,
+        "created_at": "2021-04-26T02:14:30.707Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 68,
+        "name": "Research",
+        "owner_class": "ticket",
+        "type_id": 7,
+        "option_source": "custom",
+        "required": false,
+        "position": 42,
+        "created_at": "2021-07-22T12:51:08.927Z",
+        "updated_at": "2021-07-22T12:52:10.260Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 112,
+            "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 112,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence"
+            },
+            {
+                "id": 113,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Access Request"
+            },
+            {
+                "id": 114,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Analysis"
+            },
+            {
+                "id": 115,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Break/Fix"
+            },
+            {
+                "id": 116,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Change Request/Optimization"
+            },
+            {
+                "id": 117,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - General Reports"
+            },
+            {
+                "id": 425,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Moved Tickets from Epic Reports"
+            },
+            {
+                "id": 118,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New development "
+            },
+            {
+                "id": 119,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - New Platform/Tool/Functionality"
+            },
+            {
+                "id": 545,
+                "name": "Enterprise Intelligence - Business &Clinical Intelligence - Support Business Analysts/Developers"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 69,
+        "name": "Estimated Start Date",
+        "owner_class": "ticket",
+        "type_id": 6,
+        "option_source": "custom",
+        "required": false,
+        "position": 43,
+        "created_at": "2021-11-01T17:45:25.583Z",
+        "updated_at": "2021-11-01T17:46:16.817Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 9,
+            "name": "Epic Application Support"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 9,
+                "name": "Epic Application Support"
+            },
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            },
+            {
+                "id": 492,
+                "name": "Epic Application Support - Clinical Informatics "
+            },
+            {
+                "id": 550,
+                "name": "Epic Application Support - Clinical Informatics  - Analysis"
+            },
+            {
+                "id": 551,
+                "name": "Epic Application Support - Clinical Informatics  - Break/Fix"
+            },
+            {
+                "id": 552,
+                "name": "Epic Application Support - Clinical Informatics  - Change Request/Optimization "
+            },
+            {
+                "id": 553,
+                "name": "Epic Application Support - Clinical Informatics  - New Development"
+            },
+            {
+                "id": 491,
+                "name": "Epic Application Support - Epic  Hospital Billing -PFS"
+            },
+            {
+                "id": 535,
+                "name": "Epic Application Support - Epic BPA"
+            },
+            {
+                "id": 10,
+                "name": "Epic Application Support - Epic Clinical"
+            },
+            {
+                "id": 222,
+                "name": "Epic Application Support - Epic Clinical - Behavioral Health"
+            },
+            {
+                "id": 223,
+                "name": "Epic Application Support - Epic Clinical - Clinical training "
+            },
+            {
+                "id": 14,
+                "name": "Epic Application Support - Epic Clinical - Epic Ambulatory"
+            },
+            {
+                "id": 13,
+                "name": "Epic Application Support - Epic Clinical - Epic ASAP"
+            },
+            {
+                "id": 225,
+                "name": "Epic Application Support - Epic Clinical - EPIC Care Link"
+            },
+            {
+                "id": 426,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet"
+            },
+            {
+                "id": 479,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet - Epic Regulatory/Quality "
+            },
+            {
+                "id": 226,
+                "name": "Epic Application Support - Epic Clinical - E-Signature Document Corrections"
+            },
+            {
+                "id": 227,
+                "name": "Epic Application Support - Epic Clinical - Haiku/Canto Support"
+            },
+            {
+                "id": 228,
+                "name": "Epic Application Support - Epic Clinical - Oncology(Beacon)"
+            },
+            {
+                "id": 229,
+                "name": "Epic Application Support - Epic Community Connect"
+            },
+            {
+                "id": 224,
+                "name": "Epic Application Support - Epic Community Connect - Community connect"
+            },
+            {
+                "id": 230,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Clinical"
+            },
+            {
+                "id": 231,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC other "
+            },
+            {
+                "id": 232,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Rev Cycle"
+            },
+            {
+                "id": 486,
+                "name": "Epic Application Support - Epic Go Live"
+            },
+            {
+                "id": 11,
+                "name": "Epic Application Support - Epic Inpatient"
+            },
+            {
+                "id": 220,
+                "name": "Epic Application Support - Epic Inpatient - Epic Anesthesia"
+            },
+            {
+                "id": 17,
+                "name": "Epic Application Support - Epic Inpatient - Epic ClinDoc"
+            },
+            {
+                "id": 18,
+                "name": "Epic Application Support - Epic Inpatient - Epic CPOE"
+            },
+            {
+                "id": 16,
+                "name": "Epic Application Support - Epic Inpatient - Epic OpTime"
+            },
+            {
+                "id": 19,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant"
+            },
+            {
+                "id": 516,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant - Imaging Decision Support"
+            },
+            {
+                "id": 15,
+                "name": "Epic Application Support - Epic Inpatient - Epic Willow"
+            },
+            {
+                "id": 249,
+                "name": "Epic Application Support - Epic Lab(Beaker)"
+            },
+            {
+                "id": 250,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Lab (beaker)"
+            },
+            {
+                "id": 438,
+                "name": "Epic Application Support - Epic Lab(Beaker) - New Test Edition"
+            },
+            {
+                "id": 439,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Update/ Modified Test"
+            },
+            {
+                "id": 532,
+                "name": "Epic Application Support - Epic Professional Billing "
+            },
+            {
+                "id": 478,
+                "name": "Epic Application Support - Epic Regulatory/Quality "
+            },
+            {
+                "id": 12,
+                "name": "Epic Application Support - Epic Revenue Cycle"
+            },
+            {
+                "id": 21,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic ADT"
+            },
+            {
+                "id": 23,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Cadence"
+            },
+            {
+                "id": 424,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic CDM Management"
+            },
+            {
+                "id": 445,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Claims"
+            },
+            {
+                "id": 22,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic HIM"
+            },
+            {
+                "id": 20,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Hospital Billing"
+            },
+            {
+                "id": 446,
+                "name": "Epic Application Support - Epic Training "
+            },
+            {
+                "id": 546,
+                "name": "Epic Application Support - E-Prescribing"
+            },
+            {
+                "id": 547,
+                "name": "Epic Application Support - E-Prescribing - E-Prescribe"
+            },
+            {
+                "id": 548,
+                "name": "Epic Application Support - E-Prescribing - Imprivata Maintenance"
+            },
+            {
+                "id": 496,
+                "name": "Epic Application Support - Immunization taskforce"
+            },
+            {
+                "id": 542,
+                "name": "Epic Application Support - MyChart"
+            },
+            {
+                "id": 534,
+                "name": "Epic Application Support - Orderset/Smartset"
+            },
+            {
+                "id": 488,
+                "name": "Epic Application Support - Project Team "
+            },
+            {
+                "id": 525,
+                "name": "Epic Application Support - Telehealth Video"
+            },
+            {
+                "id": 521,
+                "name": "Epic Application Support - Telehealth Video - Video Visit"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 70,
+        "name": "Estimated Completion Date",
+        "owner_class": "ticket",
+        "type_id": 6,
+        "option_source": "custom",
+        "required": false,
+        "position": 44,
+        "created_at": "2021-11-01T17:45:54.820Z",
+        "updated_at": "2021-11-01T17:45:54.820Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 9,
+            "name": "Epic Application Support"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 9,
+                "name": "Epic Application Support"
+            },
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            },
+            {
+                "id": 492,
+                "name": "Epic Application Support - Clinical Informatics "
+            },
+            {
+                "id": 550,
+                "name": "Epic Application Support - Clinical Informatics  - Analysis"
+            },
+            {
+                "id": 551,
+                "name": "Epic Application Support - Clinical Informatics  - Break/Fix"
+            },
+            {
+                "id": 552,
+                "name": "Epic Application Support - Clinical Informatics  - Change Request/Optimization "
+            },
+            {
+                "id": 553,
+                "name": "Epic Application Support - Clinical Informatics  - New Development"
+            },
+            {
+                "id": 491,
+                "name": "Epic Application Support - Epic  Hospital Billing -PFS"
+            },
+            {
+                "id": 535,
+                "name": "Epic Application Support - Epic BPA"
+            },
+            {
+                "id": 10,
+                "name": "Epic Application Support - Epic Clinical"
+            },
+            {
+                "id": 222,
+                "name": "Epic Application Support - Epic Clinical - Behavioral Health"
+            },
+            {
+                "id": 223,
+                "name": "Epic Application Support - Epic Clinical - Clinical training "
+            },
+            {
+                "id": 14,
+                "name": "Epic Application Support - Epic Clinical - Epic Ambulatory"
+            },
+            {
+                "id": 13,
+                "name": "Epic Application Support - Epic Clinical - Epic ASAP"
+            },
+            {
+                "id": 225,
+                "name": "Epic Application Support - Epic Clinical - EPIC Care Link"
+            },
+            {
+                "id": 426,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet"
+            },
+            {
+                "id": 479,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet - Epic Regulatory/Quality "
+            },
+            {
+                "id": 226,
+                "name": "Epic Application Support - Epic Clinical - E-Signature Document Corrections"
+            },
+            {
+                "id": 227,
+                "name": "Epic Application Support - Epic Clinical - Haiku/Canto Support"
+            },
+            {
+                "id": 228,
+                "name": "Epic Application Support - Epic Clinical - Oncology(Beacon)"
+            },
+            {
+                "id": 229,
+                "name": "Epic Application Support - Epic Community Connect"
+            },
+            {
+                "id": 224,
+                "name": "Epic Application Support - Epic Community Connect - Community connect"
+            },
+            {
+                "id": 230,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Clinical"
+            },
+            {
+                "id": 231,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC other "
+            },
+            {
+                "id": 232,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Rev Cycle"
+            },
+            {
+                "id": 486,
+                "name": "Epic Application Support - Epic Go Live"
+            },
+            {
+                "id": 11,
+                "name": "Epic Application Support - Epic Inpatient"
+            },
+            {
+                "id": 220,
+                "name": "Epic Application Support - Epic Inpatient - Epic Anesthesia"
+            },
+            {
+                "id": 17,
+                "name": "Epic Application Support - Epic Inpatient - Epic ClinDoc"
+            },
+            {
+                "id": 18,
+                "name": "Epic Application Support - Epic Inpatient - Epic CPOE"
+            },
+            {
+                "id": 16,
+                "name": "Epic Application Support - Epic Inpatient - Epic OpTime"
+            },
+            {
+                "id": 19,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant"
+            },
+            {
+                "id": 516,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant - Imaging Decision Support"
+            },
+            {
+                "id": 15,
+                "name": "Epic Application Support - Epic Inpatient - Epic Willow"
+            },
+            {
+                "id": 249,
+                "name": "Epic Application Support - Epic Lab(Beaker)"
+            },
+            {
+                "id": 250,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Lab (beaker)"
+            },
+            {
+                "id": 438,
+                "name": "Epic Application Support - Epic Lab(Beaker) - New Test Edition"
+            },
+            {
+                "id": 439,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Update/ Modified Test"
+            },
+            {
+                "id": 532,
+                "name": "Epic Application Support - Epic Professional Billing "
+            },
+            {
+                "id": 478,
+                "name": "Epic Application Support - Epic Regulatory/Quality "
+            },
+            {
+                "id": 12,
+                "name": "Epic Application Support - Epic Revenue Cycle"
+            },
+            {
+                "id": 21,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic ADT"
+            },
+            {
+                "id": 23,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Cadence"
+            },
+            {
+                "id": 424,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic CDM Management"
+            },
+            {
+                "id": 445,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Claims"
+            },
+            {
+                "id": 22,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic HIM"
+            },
+            {
+                "id": 20,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Hospital Billing"
+            },
+            {
+                "id": 446,
+                "name": "Epic Application Support - Epic Training "
+            },
+            {
+                "id": 546,
+                "name": "Epic Application Support - E-Prescribing"
+            },
+            {
+                "id": 547,
+                "name": "Epic Application Support - E-Prescribing - E-Prescribe"
+            },
+            {
+                "id": 548,
+                "name": "Epic Application Support - E-Prescribing - Imprivata Maintenance"
+            },
+            {
+                "id": 496,
+                "name": "Epic Application Support - Immunization taskforce"
+            },
+            {
+                "id": 542,
+                "name": "Epic Application Support - MyChart"
+            },
+            {
+                "id": 534,
+                "name": "Epic Application Support - Orderset/Smartset"
+            },
+            {
+                "id": 488,
+                "name": "Epic Application Support - Project Team "
+            },
+            {
+                "id": 525,
+                "name": "Epic Application Support - Telehealth Video"
+            },
+            {
+                "id": 521,
+                "name": "Epic Application Support - Telehealth Video - Video Visit"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 71,
+        "name": "PRD Date",
+        "owner_class": "ticket",
+        "type_id": 6,
+        "option_source": "custom",
+        "required": false,
+        "position": 45,
+        "created_at": "2021-11-01T17:52:20.660Z",
+        "updated_at": "2021-11-01T17:52:20.660Z",
+        "ci_type": null,
+        "helpdesk_category": {
+            "id": 9,
+            "name": "Epic Application Support"
+        },
+        "helpdesk_categories": [
+            {
+                "id": 9,
+                "name": "Epic Application Support"
+            },
+            {
+                "id": 428,
+                "name": "Epic Application Support - TQI"
+            },
+            {
+                "id": 492,
+                "name": "Epic Application Support - Clinical Informatics "
+            },
+            {
+                "id": 550,
+                "name": "Epic Application Support - Clinical Informatics  - Analysis"
+            },
+            {
+                "id": 551,
+                "name": "Epic Application Support - Clinical Informatics  - Break/Fix"
+            },
+            {
+                "id": 552,
+                "name": "Epic Application Support - Clinical Informatics  - Change Request/Optimization "
+            },
+            {
+                "id": 553,
+                "name": "Epic Application Support - Clinical Informatics  - New Development"
+            },
+            {
+                "id": 491,
+                "name": "Epic Application Support - Epic  Hospital Billing -PFS"
+            },
+            {
+                "id": 535,
+                "name": "Epic Application Support - Epic BPA"
+            },
+            {
+                "id": 10,
+                "name": "Epic Application Support - Epic Clinical"
+            },
+            {
+                "id": 222,
+                "name": "Epic Application Support - Epic Clinical - Behavioral Health"
+            },
+            {
+                "id": 223,
+                "name": "Epic Application Support - Epic Clinical - Clinical training "
+            },
+            {
+                "id": 14,
+                "name": "Epic Application Support - Epic Clinical - Epic Ambulatory"
+            },
+            {
+                "id": 13,
+                "name": "Epic Application Support - Epic Clinical - Epic ASAP"
+            },
+            {
+                "id": 225,
+                "name": "Epic Application Support - Epic Clinical - EPIC Care Link"
+            },
+            {
+                "id": 426,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet"
+            },
+            {
+                "id": 479,
+                "name": "Epic Application Support - Epic Clinical - Epic Healthy Planet - Epic Regulatory/Quality "
+            },
+            {
+                "id": 226,
+                "name": "Epic Application Support - Epic Clinical - E-Signature Document Corrections"
+            },
+            {
+                "id": 227,
+                "name": "Epic Application Support - Epic Clinical - Haiku/Canto Support"
+            },
+            {
+                "id": 228,
+                "name": "Epic Application Support - Epic Clinical - Oncology(Beacon)"
+            },
+            {
+                "id": 229,
+                "name": "Epic Application Support - Epic Community Connect"
+            },
+            {
+                "id": 224,
+                "name": "Epic Application Support - Epic Community Connect - Community connect"
+            },
+            {
+                "id": 230,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Clinical"
+            },
+            {
+                "id": 231,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC other "
+            },
+            {
+                "id": 232,
+                "name": "Epic Application Support - Epic Community Connect - Community connect - CC Rev Cycle"
+            },
+            {
+                "id": 486,
+                "name": "Epic Application Support - Epic Go Live"
+            },
+            {
+                "id": 11,
+                "name": "Epic Application Support - Epic Inpatient"
+            },
+            {
+                "id": 220,
+                "name": "Epic Application Support - Epic Inpatient - Epic Anesthesia"
+            },
+            {
+                "id": 17,
+                "name": "Epic Application Support - Epic Inpatient - Epic ClinDoc"
+            },
+            {
+                "id": 18,
+                "name": "Epic Application Support - Epic Inpatient - Epic CPOE"
+            },
+            {
+                "id": 16,
+                "name": "Epic Application Support - Epic Inpatient - Epic OpTime"
+            },
+            {
+                "id": 19,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant"
+            },
+            {
+                "id": 516,
+                "name": "Epic Application Support - Epic Inpatient - Epic Radiant - Imaging Decision Support"
+            },
+            {
+                "id": 15,
+                "name": "Epic Application Support - Epic Inpatient - Epic Willow"
+            },
+            {
+                "id": 249,
+                "name": "Epic Application Support - Epic Lab(Beaker)"
+            },
+            {
+                "id": 250,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Lab (beaker)"
+            },
+            {
+                "id": 438,
+                "name": "Epic Application Support - Epic Lab(Beaker) - New Test Edition"
+            },
+            {
+                "id": 439,
+                "name": "Epic Application Support - Epic Lab(Beaker) - Update/ Modified Test"
+            },
+            {
+                "id": 532,
+                "name": "Epic Application Support - Epic Professional Billing "
+            },
+            {
+                "id": 478,
+                "name": "Epic Application Support - Epic Regulatory/Quality "
+            },
+            {
+                "id": 12,
+                "name": "Epic Application Support - Epic Revenue Cycle"
+            },
+            {
+                "id": 21,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic ADT"
+            },
+            {
+                "id": 23,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Cadence"
+            },
+            {
+                "id": 424,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic CDM Management"
+            },
+            {
+                "id": 445,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Claims"
+            },
+            {
+                "id": 22,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic HIM"
+            },
+            {
+                "id": 20,
+                "name": "Epic Application Support - Epic Revenue Cycle - Epic Hospital Billing"
+            },
+            {
+                "id": 446,
+                "name": "Epic Application Support - Epic Training "
+            },
+            {
+                "id": 546,
+                "name": "Epic Application Support - E-Prescribing"
+            },
+            {
+                "id": 547,
+                "name": "Epic Application Support - E-Prescribing - E-Prescribe"
+            },
+            {
+                "id": 548,
+                "name": "Epic Application Support - E-Prescribing - Imprivata Maintenance"
+            },
+            {
+                "id": 496,
+                "name": "Epic Application Support - Immunization taskforce"
+            },
+            {
+                "id": 542,
+                "name": "Epic Application Support - MyChart"
+            },
+            {
+                "id": 534,
+                "name": "Epic Application Support - Orderset/Smartset"
+            },
+            {
+                "id": 488,
+                "name": "Epic Application Support - Project Team "
+            },
+            {
+                "id": 525,
+                "name": "Epic Application Support - Telehealth Video"
+            },
+            {
+                "id": 521,
+                "name": "Epic Application Support - Telehealth Video - Video Visit"
+            }
+        ],
+        "options": []
+    },
+    {
+        "id": 75,
+        "name": "MSBookingsAppointmentID",
+        "owner_class": "ticket",
+        "type_id": 1,
+        "option_source": "custom",
+        "required": false,
+        "position": 46,
+        "created_at": "2023-11-08T18:02:35.100Z",
+        "updated_at": "2023-11-08T18:02:35.100Z",
+        "ci_type": null,
+        "helpdesk_category": null,
+        "helpdesk_categories": [],
+        "options": []
+    }
+]
