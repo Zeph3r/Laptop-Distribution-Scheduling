@@ -138,12 +138,14 @@ def create_service_request(appointment):
 
 # Function to map appointment details to service request fields
 def map_appointment_to_service_request(appointment):
+    # Contruct the description from appointment details
+    name = appointment.get('customerName', 'Not Provided')
+    email = appointment.get('customerEmailAddress', 'Not Provided')
+    phone = appointment.get('customerPhone', 'Not Provided')
+    notes = appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()
     try:
         # Construct the description from appointment details
-        description = f"Name: {appointment.get('customerName')}\n" \
-                      f"Email: {appointment.get('customerEmailAddress')}\n" \
-                      f"Phone: {appointment.get('customerPhone')}\n" \
-                      f"Notes: {appointment.get('serviceNotes')}"
+        description = f"<b>Name:</b> {name}<br><br><b>Email</b>: {email}<br><br><b>Phone</b>: {phone}<br><br><b>Notes</b>: {notes}" 
 
         # Extract the staff member's email or identifier
         booking_staff_member = appointment.get('bookingStaffMember')
@@ -154,9 +156,9 @@ def map_appointment_to_service_request(appointment):
                 'title': appointment.get('serviceName'),
                 'description': description,
                 'type_id': 99,  # Service Request (#SR) type ID
-                'category': 34, # Ticket category "Technical Support - Hardware - Laptop"
-                'priority_id': 4,  
-                'agent_email': staff_email,  # This assumes that the agent can be identified by email in BOSSDesk
+                'category_id': 34, # Ticket category "Technical Support - Hardware - Laptop"
+                'team_id': 48,
+                'priority_id': 4,
                 'custom_fields': {
                     '75': appointment.get('id'),  # Microsoft Bookings appointment ID
                 }
