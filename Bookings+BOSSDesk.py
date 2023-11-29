@@ -6,6 +6,7 @@ import time
 import json
 from datetime import datetime
 from dotenv import load_dotenv
+from requests.exceptions import HTTPError, ConnectionError, Timeout, JSONDecodeError
 
 #Implementing logging into script to handle log messages. Writes the logs to a file named integration.log
 logging.basicConfig(level=logging.INFO,
@@ -67,10 +68,17 @@ def get_existing_tickets():
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
-        return response.json().get('value', [])
+        tickets = response.json().get('value', [])
+        existing_appointment_ids = {ticket['custom_fields']['75'] for ticket in tickets if '75' in ticket['custom_fields']}
+
+        # Verbose logging of API response
+        logger.debug(f"BOSSDesk API Response: {response.text}")
+
+        return existing_appointment_ids
+    
     except requests.RequestException as e:
         logger.error(f"Error getting existing tickets: {e}")
-        return []
+        return set()
 
 
 
@@ -84,25 +92,30 @@ def get_new_appointments():
             return []
 
         # Set up the headers for the request to Microsoft Graph API
-        headers = {
-            'Authorization': f'Bearer {token}',
-        }
+        headers = {'Authorization': f'Bearer {token}'}
 
         # Get the business ID from the environment
         business_id = os.environ.get('MICROSOFT_BOOKINGS_BUSINESS_ID')
 
         # Define the URL to get appointments
         url = f"{MICROSOFT_GRAPH_API_ENDPOINT}/solutions/bookingBusinesses/{business_id}/appointments"
-        
+
         # Send the request and get the response
         response = requests.get(url, headers=headers)
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx and 5xx)
-        return response.json().get('value', [])
+        
+        appointments = response.json().get('value', [])
+
+        #Log the full details of each appointment
+        for appointment in appointments:
+            logger.debug(f"Appointment data: {json.dumps(appointment, indent=2)}")
+        
+        return appointments
     
-    #Checks to see if the request was successful
     except requests.RequestException as e:
         logger.error(f"Error getting appointments: {e}")
-        return [] #Ensures a list is returned even in case of an exception
+        return [] # Ensures a list is returned even in case of an exception
+
 
 
 # Function to create a service request in BOSSDesk
@@ -125,6 +138,19 @@ def create_service_request(appointment):
         response = requests.post(url, headers=headers, data=json.dumps(service_request), verify=False) #remove verify=False in PROD to prevent man in middle attacks
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx and 5xx)
         
+    except ConnectionError:
+        logger.error("Network error occurred while creating service request")
+    except Timeout:
+        logger.error("Request timed out while creating service request")
+    except JSONDecodeError:
+        logger.error("Response JSON decoding failed")
+    except HTTPError as e:
+        if e.response.status_code == 429:
+            logger.error("Rate limit exceeded")
+        elif e.response.status_code >= 500:
+            logger.error("Server error occurred")
+        else:
+            logger.error(f"HTTP error occurred: {e}")
     except requests.RequestException as e:
         logger.error(f"Error creating service request: {e}")
     else:
@@ -138,14 +164,27 @@ def create_service_request(appointment):
 
 # Function to map appointment details to service request fields
 def map_appointment_to_service_request(appointment):
-    # Contruct the description from appointment details
-    name = appointment.get('customerName', 'Not Provided')
-    email = appointment.get('customerEmailAddress', 'Not Provided')
-    phone = appointment.get('customerPhone', 'Not Provided')
-    notes = appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()
     try:
+        customer_info = appointment.get('customers', [{}])[0]
+        logger.debug(f"Extracted name {customer_info}")
+        name = appointment.get('name', 'Not Provided')
+        logger.debug(f"Extracted name {name}")
+        email = appointment.get('emailAddress', 'Not Provided')
+        logger.debug(f"Extracted email {email}")
+        phone = appointment.get('phone', 'Not Provided')
+        logger.debug(f"Extracted phone {phone}")
+        notes = appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()
+        logger.debug(f"Extracted notes: {notes}")
         # Construct the description from appointment details
         description = f"<b>Name:</b> {name}<br><br><b>Email</b>: {email}<br><br><b>Phone</b>: {phone}<br><br><b>Notes</b>: {notes}" 
+
+        #Conditional logging for missing data
+        if not name:
+            logger.warning("Name is missing in appointment data")
+        if not email:
+            logger.warning("e=Enauk address is missing in appointment data")
+        if not phone:
+            logger.warning("Phone number is missing in appointment data")
 
         # Extract the staff member's email or identifier
         booking_staff_member = appointment.get('bookingStaffMember')
