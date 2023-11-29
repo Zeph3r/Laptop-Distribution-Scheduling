@@ -165,37 +165,48 @@ def create_service_request(appointment):
 # Function to map appointment details to service request fields
 def map_appointment_to_service_request(appointment):
     try:
-        customer_info = appointment.get('customers', [{}])[0]
-        logger.debug(f"Extracted name {customer_info}")
-        name = appointment.get('name', 'Not Provided')
-        logger.debug(f"Extracted name {name}")
-        email = appointment.get('emailAddress', 'Not Provided')
-        logger.debug(f"Extracted email {email}")
-        phone = appointment.get('phone', 'Not Provided')
-        logger.debug(f"Extracted phone {phone}")
-        notes = appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()
-        logger.debug(f"Extracted notes: {notes}")
-        # Construct the description from appointment details
-        description = f"<b>Name:</b> {name}<br><br><b>Email</b>: {email}<br><br><b>Phone</b>: {phone}<br><br><b>Notes</b>: {notes}" 
+        # Assuming 'customers' is always present and has at least one customer.
+        customer = appointment['customers'][0]  # Get the first customer
+        custom_questions = customer.get('customQuestionAnswers', [])
+        
+        # Initialize variables for custom fields
+        employee_name = 'Not Provided'
+        employee_email = 'Not Provided'
+        employee_phone = 'Not Provided'
 
-        #Conditional logging for missing data
-        if not name:
-            logger.warning("Name is missing in appointment data")
-        if not email:
-            logger.warning("e=Enauk address is missing in appointment data")
-        if not phone:
-            logger.warning("Phone number is missing in appointment data")
+        # Iterate through custom questions and map answers
+        for question in custom_questions:
+            question_id = question.get('questionId')
+            answer = question.get('answer')
+
+            if question_id == "9a5bda2d-87a7-43eb-87a5-66ad50615b7b":  # ID for Employee Name
+                employee_name = answer
+            elif question_id == "d70fdd44-d7df-434d-b5c9-6cf1e8d17d01":  # ID for Employee Email
+                employee_email = answer
+            elif question_id == "da979f4c-768a-4019-b7d0-ad28a0549618":  # ID for Employee Phone Number
+                employee_phone = answer
+                
+        # Construct the description from appointment details
+        description = f"<b>Name:</b> {employee_name}<br><br><b>Email</b>: {employee_email}<br><br><b>Phone</b>: {employee_phone}<br><br><b>Notes</b>: {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
+
+        # Add conditional logging for missing data
+        if employee_name == 'Not Provided':
+            logger.warning("Employee name is missing in appointment data")
+        if employee_email == 'Not Provided':
+            logger.warning("Employee email is missing in appointment data")
+        if employee_phone == 'Not Provided':
+            logger.warning("Employee phone number is missing in appointment data")
 
         # Extract the staff member's email or identifier
         booking_staff_member = appointment.get('bookingStaffMember')
-        staff_email = appointment.get('bookingStaffMember').get('customerEmailAddress') if booking_staff_member else None
+        staff_email = booking_staff_member.get('customerEmailAddress') if booking_staff_member else None
 
         service_request = {
             'ticket': {
                 'title': appointment.get('serviceName'),
                 'description': description,
                 'type_id': 99,  # Service Request (#SR) type ID
-                'category_id': 34, # Ticket category "Technical Support - Hardware - Laptop"
+                'category_id': 34,  # Ticket category "Technical Support - Hardware - Laptop"
                 'team_id': 48,
                 'priority_id': 4,
                 'custom_fields': {
