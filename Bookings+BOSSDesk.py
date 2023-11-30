@@ -174,21 +174,33 @@ def map_appointment_to_service_request(appointment):
         employee_email = 'Not Provided'
         employee_phone = 'Not Provided'
 
+        #Initialize enviroment variables for customQuestion IDs
+        employee_name_question_id = os.getenv('EMPLOYEE_NAME_QUESTION_ID')
+        employee_email_question_id = os.getenv('EMPLOYEE_EMAIL_QUESTION_ID')
+        employee_phone_question_id = os.getenv('EMPLOYEE_PHONE_QUESTION_ID')
+        employee_type_question_id = os.getenv('EMPLOYEE_TYPE_QUESTION_ID')
+        employee_manager_question_id = os.getenv('EMPLOYEE_MANAGER_QUESTION_ID')
+        employee_manager_phone_question_id = os.getenv('EMPLOYEE_MANAGER_PHONE_QUESTION_ID')
+
+
         # Iterate through custom questions and map answers
         for question in custom_questions:
             question_id = question.get('questionId')
             answer = question.get('answer')
-
-            employee_name_question_id = os.getenv('EMPLOYEE_NAME_QUESTION_ID')
-            employee_email_question_id = os.getenv('EMPLOYEE_EMAIL_QUESTION_ID')
-            employee_phone_question_id = os.getenv('EMPLOYEE_PHONE_QUESTION_ID')
-
+     
             if question_id == employee_name_question_id:  # ID for Employee Name
                 employee_name = answer
             elif question_id == employee_email_question_id:  # ID for Employee Email
                 employee_email = answer
             elif question_id ==  employee_phone_question_id:  # ID for Employee Phone Number
                 employee_phone = answer
+            elif question_id == employee_type_question_id:
+                employee_type = answer
+            elif question_id == employee_manager_question_id:
+                employee_manager = answer
+            elif question_id == employee_manager_phone_question_id:
+                employee_manager_phone = answer
+            
                 
         # Construct the description from appointment details
         description = f"<b>Name:</b> {employee_name}<br><br><b>Email</b>: {employee_email}<br><br><b>Phone</b>: {employee_phone}<br><br><b>Notes</b>: {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
