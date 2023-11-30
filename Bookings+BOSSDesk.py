@@ -179,11 +179,15 @@ def map_appointment_to_service_request(appointment):
             question_id = question.get('questionId')
             answer = question.get('answer')
 
-            if question_id == "9a5bda2d-87a7-43eb-87a5-66ad50615b7b":  # ID for Employee Name
+            employee_name_question_id = os.getenv('EMPLOYEE_NAME_QUESTION_ID')
+            employee_email_question_id = os.getenv('EMPLOYEE_EMAIL_QUESTION_ID')
+            employee_phone_question_id = os.getenv('EMPLOYEE_PHONE_QUESTION_ID')
+
+            if question_id == employee_name_question_id:  # ID for Employee Name
                 employee_name = answer
-            elif question_id == "d70fdd44-d7df-434d-b5c9-6cf1e8d17d01":  # ID for Employee Email
+            elif question_id == employee_email_question_id:  # ID for Employee Email
                 employee_email = answer
-            elif question_id == "da979f4c-768a-4019-b7d0-ad28a0549618":  # ID for Employee Phone Number
+            elif question_id ==  employee_phone_question_id:  # ID for Employee Phone Number
                 employee_phone = answer
                 
         # Construct the description from appointment details
