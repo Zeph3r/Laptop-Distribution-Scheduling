@@ -173,6 +173,9 @@ def map_appointment_to_service_request(appointment):
         employee_name = 'Not Provided'
         employee_email = 'Not Provided'
         employee_phone = 'Not Provided'
+        employee_manager = 'Not Provided'
+        employee_manager_phone = 'Not Provided'
+        employee_type = 'Not Provided'
 
         #Initialize enviroment variables for customQuestion IDs
         employee_name_question_id = os.getenv('EMPLOYEE_NAME_QUESTION_ID')
@@ -187,23 +190,23 @@ def map_appointment_to_service_request(appointment):
         for question in custom_questions:
             question_id = question.get('questionId')
             answer = question.get('answer')
-     
-            if question_id == employee_name_question_id:  # ID for Employee Name
-                employee_name = answer
-            elif question_id == employee_email_question_id:  # ID for Employee Email
-                employee_email = answer
-            elif question_id ==  employee_phone_question_id:  # ID for Employee Phone Number
-                employee_phone = answer
-            elif question_id == employee_type_question_id:
-                employee_type = answer
-            elif question_id == employee_manager_question_id:
+
+            if question_id == employee_manager_question_id:
                 employee_manager = answer
             elif question_id == employee_manager_phone_question_id:
                 employee_manager_phone = answer
-            
+            elif question_id == employee_name_question_id:
+                employee_name = answer
+            elif question_id == employee_phone_question_id:
+                employee_phone = answer
+            elif question_id == employee_email_question_id:
+                employee_email = answer
+            elif question_id == employee_type_question_id:
+                employee_type = answer
+                   
                 
         # Construct the description from appointment details
-        description = f"<b>Name:</b> {employee_name}<br><br><b>Email</b>: {employee_email}<br><br><b>Phone</b>: {employee_phone}<br><br><b>Notes</b>: {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
+        description = f"<b>Manager Name</b> {employee_manager}<br><b>Manager Phone Number</b> {employee_manager_phone}<br><br><br><b>Name:</b> {employee_name}<br><b>Phone Number:</b> {employee_phone}<br><b>Email:</b> {employee_email}<br><b>Employee Type:</b> {employee_type}<br><br><br><h1>Special Instructions</h1><br> {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
 
         # Add conditional logging for missing data
         if employee_name == 'Not Provided':
