@@ -25,7 +25,7 @@ def get_token():
         'client_secret': os.environ.get('CLIENT_SECRET'),
         'scope': 'https://graph.microsoft.com/.default',
         'grant_type': 'client_credentials'
-    }
+    } 
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -161,6 +161,10 @@ def create_service_request(appointment):
             logger.error(f"Unexpected status code: {response.status_code}")
 
 
+def map_staff_id_to_agent_id(staff_id):
+    staff_id_agent_id_map = json.loads(os.getenv('STAFF_ID_AGENT_ID_MAP', '{}'))
+    return staff_id_agent_id_map.get(staff_id, None) # Returns none if mapping is not found. 
+
 
 # Function to map appointment details to service request fields
 def map_appointment_to_service_request(appointment):
@@ -206,7 +210,7 @@ def map_appointment_to_service_request(appointment):
                    
                 
         # Construct the description from appointment details
-        description = f"<b>Manager Name</b> {employee_manager}<br><b>Manager Phone Number</b> {employee_manager_phone}<br><br><br><b>Name:</b> {employee_name}<br><b>Phone Number:</b> {employee_phone}<br><b>Email:</b> {employee_email}<br><b>Employee Type:</b> {employee_type}<br><br><br><h1>Special Instructions</h1><br> {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
+        description = f"<b>Manager Name</b> {employee_manager}<br><b>Manager Phone Number</b> {employee_manager_phone}<br><br><br><b>Name:</b> {employee_name}<br><b>Phone Number:</b> {employee_phone}<br><b>Email:</b> {employee_email}<br><b>Employee Type:</b> {employee_type}<br><br><br><h3>Special Instructions</h3><br> {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
 
         # Add conditional logging for missing data
         if employee_name == 'Not Provided':
@@ -220,6 +224,15 @@ def map_appointment_to_service_request(appointment):
         booking_staff_member = appointment.get('bookingStaffMember')
         staff_email = booking_staff_member.get('customerEmailAddress') if booking_staff_member else None
 
+        # Extract staff member ID from the appointment
+        staff_member_id = appointment.get('staffMemberIds', [])[0] if appointment.get('staffMemberIds') else None
+
+        if staff_member_id:
+            # Map staff member ID to agent ID in BOSSDesk
+            agent_id = map_staff_id_to_agent_id(staff_member_id)
+        else:
+            logger.warning("No staff member ID found in the appointment")
+            
         service_request = {
             'ticket': {
                 'title': appointment.get('serviceName'),
@@ -230,10 +243,13 @@ def map_appointment_to_service_request(appointment):
                 'priority_id': 4,
                 'custom_fields': {
                     '75': appointment.get('id'),  # Microsoft Bookings appointment ID
-                }
-                # Add any other necessary fields
+                },
+                'agent_id': agent_id
             }
         }
+        
+
+
     except Exception as e:
         logger.error(f"Error mapping appointment to service request: {e}")
         return None
