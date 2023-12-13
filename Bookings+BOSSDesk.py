@@ -165,7 +165,14 @@ def map_staff_id_to_agent_id(staff_id):
     staff_id_agent_id_map = json.loads(os.getenv('STAFF_ID_AGENT_ID_MAP', '{}'))
     return staff_id_agent_id_map.get(staff_id, None) # Returns none if mapping is not found. 
 
+def extract_username_from_email(email):
+    if '@gmh.edu' in email:
+        return email.split('@')[0]
+    else:
+        logger.warning(f"Invalid email format: {email}")
+        return None
 
+    
 # Function to map appointment details to service request fields
 def map_appointment_to_service_request(appointment):
     try:
@@ -180,6 +187,7 @@ def map_appointment_to_service_request(appointment):
         employee_manager = 'Not Provided'
         employee_manager_phone = 'Not Provided'
         employee_type = 'Not Provided'
+        employee_id = None
 
         #Initialize enviroment variables for customQuestion IDs
         employee_name_question_id = os.getenv('EMPLOYEE_NAME_QUESTION_ID')
@@ -188,6 +196,9 @@ def map_appointment_to_service_request(appointment):
         employee_type_question_id = os.getenv('EMPLOYEE_TYPE_QUESTION_ID')
         employee_manager_question_id = os.getenv('EMPLOYEE_MANAGER_QUESTION_ID')
         employee_manager_phone_question_id = os.getenv('EMPLOYEE_MANAGER_PHONE_QUESTION_ID')
+        employee_id_question_id = os.getenv('EMPLOYEE_ID_NUMBER_ID')
+        employee_username = extract_username_from_email(employee_email)
+        #manager_username = extract_username_from_email(manager_email)
 
 
         # Iterate through custom questions and map answers
@@ -205,8 +216,11 @@ def map_appointment_to_service_request(appointment):
                 employee_phone = answer
             elif question_id == employee_email_question_id:
                 employee_email = answer
+                logger.debug(f"Extracted employee email: {employee_email}")
             elif question_id == employee_type_question_id:
                 employee_type = answer
+            elif question_id == employee_id_question_id:
+                employee_id = answer
                    
                 
         # Construct the description from appointment details
@@ -244,7 +258,11 @@ def map_appointment_to_service_request(appointment):
                 'custom_fields': {
                     '75': appointment.get('id'),  # Microsoft Bookings appointment ID
                 },
-                'agent_id': agent_id
+                'agent_id': agent_id,
+                'requester': {
+                    "username": employee_username
+                    
+                }
             }
         }
         
