@@ -1,6 +1,7 @@
 import os
 import requests
 import logging
+import certifi
 import sys
 import time
 import json
@@ -9,7 +10,7 @@ from dotenv import load_dotenv
 from requests.exceptions import HTTPError, ConnectionError, Timeout, JSONDecodeError
 
 #Implementing logging into script to handle log messages. Writes the logs to a file named integration.log
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler('integration.log'), logging.StreamHandler()])
 logger = logging.getLogger(__name__)
@@ -66,13 +67,16 @@ def get_existing_tickets():
     url = f"{BOSSDESK_API_ENDPOINT}/tickets"
     
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, verify=False)
         response.raise_for_status()
-        tickets = response.json().get('value', [])
-        existing_appointment_ids = {ticket['custom_fields']['75'] for ticket in tickets if '75' in ticket['custom_fields']}
+        
+        logger.debug(f"Raw response from BOSSDesk API: {response.json()}")
+
+        tickets = response.json()
+        existing_appointment_ids = {ticket['custom_fields']['75'] for ticket in tickets if 'custom_fields' in ticket and isinstance(ticket['custom_fields'], dict) and '75' in ticket['custom_fields']}
 
         # Verbose logging of API response
-        logger.debug(f"BOSSDesk API Response: {response.text}")
+        logger.info(f"BOSSDesk API Response: {response.text}")
 
         return existing_appointment_ids
     
@@ -101,42 +105,69 @@ def get_new_appointments():
         url = f"{MICROSOFT_GRAPH_API_ENDPOINT}/solutions/bookingBusinesses/{business_id}/appointments"
 
         # Send the request and get the response
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, verify=False)
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx and 5xx)
-        
+
+        logger.debug(f"Raw response from BOSSDesk API: {response.json()}")
+
         appointments = response.json().get('value', [])
 
         #Log the full details of each appointment
         for appointment in appointments:
-            logger.debug(f"Appointment data: {json.dumps(appointment, indent=2)}")
+            logger.info(f"Appointment data: {json.dumps(appointment, indent=2)}")
         
         return appointments
     
     except requests.RequestException as e:
         logger.error(f"Error getting appointments: {e}")
         return [] # Ensures a list is returned even in case of an exception
+'''
+def update_ticket_requester(ticket_id, requester_username):
+    headers = {
+        'Authorization': f'Bearer {BOSSDESK_API_KEY}',
+        'Content-Type': 'application/json'
+    }
+    url = f"{BOSSDESK_API_ENDPOINT}/tickets/{ticket_id}"
 
+    update_payload = {"requester": {"username": requester_username}}
 
+    try:
+        response = requests.patch(url, headers=headers, json=update_payload)
+        logger.info(f"PATCH request sent to {url} with payload: {update_payload}")
+        response.raise_for_status()
+        logger.info(f"Successfully updated requester for ticket ID {ticket_id}. Response: {response.status_code}, {response.text}")
+    except requests.RequestException as e:
+        logger.error(f"Error updating requester for ticket ID {ticket_id}: {e}, Response: {response.status_code}, {response.text}")
+'''
 
 # Function to create a service request in BOSSDesk
 def create_service_request(appointment):
     try:
         # Map appointment details to service request fields
         service_request = map_appointment_to_service_request(appointment)
-        
+
+        # If mapping was unsuccessful, skip creating the service request
+        if not service_request:
+            logger.warning("Failed to map appointment to service request")
+            return
+
         # Set up the headers for the request to BOSSDesk API
         headers = {
             'Authorization': f'Bearer {BOSSDESK_API_KEY}',
             'Content-Type': 'application/json'
         }
-        
+
         # Define the URL to create the ticket
         url = f"{BOSSDESK_API_ENDPOINT}/tickets"
-        
+
         # Send the request and get the response
         logger.info(f"Service request payload: {json.dumps(service_request, indent=2)}")
-        response = requests.post(url, headers=headers, data=json.dumps(service_request), verify=False) #remove verify=False in PROD to prevent man in middle attacks
+        response = requests.post(url, headers=headers, data=json.dumps(service_request), verify=False)  # In PROD, remove verify=False
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx and 5xx)
+
+        # Log successful service request creation
+        if response.status_code == 201:
+            logger.info(f"Service request created successfully: {response.json().get('id')}")
         
     except ConnectionError:
         logger.error("Network error occurred while creating service request")
@@ -145,20 +176,9 @@ def create_service_request(appointment):
     except JSONDecodeError:
         logger.error("Response JSON decoding failed")
     except HTTPError as e:
-        if e.response.status_code == 429:
-            logger.error("Rate limit exceeded")
-        elif e.response.status_code >= 500:
-            logger.error("Server error occurred")
-        else:
-            logger.error(f"HTTP error occurred: {e}")
+        logger.error(f"HTTP error occurred: {e}")
     except requests.RequestException as e:
         logger.error(f"Error creating service request: {e}")
-    else:
-        # Check if the request was successful (this is now redundant due to raise_for_status but kept for clarity)
-        if response.status_code == 201:
-            logger.info(f"Service request created successfully: {response.json().get('id')}")
-        else:
-            logger.error(f"Unexpected status code: {response.status_code}")
 
 
 def map_staff_id_to_agent_id(staff_id):
@@ -166,10 +186,59 @@ def map_staff_id_to_agent_id(staff_id):
     return staff_id_agent_id_map.get(staff_id, None) # Returns none if mapping is not found. 
 
 def extract_username_from_email(email):
-    if '@gmh.edu' in email:
+    if email and '@gmh.edu' in email:
         return email.split('@')[0]
     else:
-        logger.warning(f"Invalid email format: {email}")
+        # Log a warning if the email format is invalid or not provided
+        logger.warning(f"Invalid or missing email: {email}")
+        return None
+
+# Searches BOSSDesk for a user by username and returns their friendly_id.   
+def find_user_id(username):
+    query_params = {'q[username_eq]': username}
+    url = f"{BOSSDESK_API_ENDPOINT}/users"
+
+    headers = {
+        'Authorization': f'Bearer {BOSSDESK_API_KEY}',
+        'Content-Type': 'application/json'
+    }
+
+    try:
+        response = requests.get(url, headers=headers, params=query_params, verify=False)
+        response.raise_for_status()
+        users = response.json()
+        if users:
+            return users[0].get('friendly_id')
+        else:
+            logger.warning(f"No user found for username: {username}")
+            return None
+    except requests.RequestException as e:
+        logger.error(f"Error searching for user by username: {e}")
+        return None
+
+
+
+def get_requester_id_by_email(email):
+    if not email:
+        logger.warning("Email not provided for fetching requester_id")
+        return None
+
+    try:
+        url = f"{BOSSDESK_API_ENDPOINT}/users?q[email_eq]={email}"
+        headers = {
+            'Authorization': f'Bearer {BOSSDESK_API_KEY}',
+            'Content-Type': 'application/json'
+        }
+        response = requests.get(url, headers=headers, verify=False)
+        response.raise_for_status()
+        users = response.json()
+        if users:
+            return users[0].get("id")
+        else:
+            logger.warning(f"No user found with email: {email}")
+            return None
+    except requests.RequestException as e:
+        logger.error(f"Error fetching requester_id by email: {e}")
         return None
 
     
@@ -180,60 +249,38 @@ def map_appointment_to_service_request(appointment):
         customer = appointment['customers'][0]  # Get the first customer
         custom_questions = customer.get('customQuestionAnswers', [])
         
+        # Define a dictionary for question ID to variable mappings
+        question_mappings = {
+            os.getenv('EMPLOYEE_NAME_QUESTION_ID'): 'employee_name',
+            os.getenv('EMPLOYEE_EMAIL_QUESTION_ID'): 'employee_email',
+            os.getenv('EMPLOYEE_PHONE_QUESTION_ID'): 'employee_phone',
+            os.getenv('EMPLOYEE_TYPE_QUESTION_ID'): 'employee_type',
+            os.getenv('EMPLOYEE_MANAGER_QUESTION_ID'): 'employee_manager',
+            os.getenv('EMPLOYEE_MANAGER_EMAIL_QUESTION_ID'): 'employee_manager_email'
+        }
+
         # Initialize variables for custom fields
-        employee_name = 'Not Provided'
-        employee_email = 'Not Provided'
-        employee_phone = 'Not Provided'
-        employee_manager = 'Not Provided'
-        employee_manager_phone = 'Not Provided'
-        employee_type = 'Not Provided'
-        employee_id = None
-
-        #Initialize enviroment variables for customQuestion IDs
-        employee_name_question_id = os.getenv('EMPLOYEE_NAME_QUESTION_ID')
-        employee_email_question_id = os.getenv('EMPLOYEE_EMAIL_QUESTION_ID')
-        employee_phone_question_id = os.getenv('EMPLOYEE_PHONE_QUESTION_ID')
-        employee_type_question_id = os.getenv('EMPLOYEE_TYPE_QUESTION_ID')
-        employee_manager_question_id = os.getenv('EMPLOYEE_MANAGER_QUESTION_ID')
-        employee_manager_phone_question_id = os.getenv('EMPLOYEE_MANAGER_PHONE_QUESTION_ID')
-        employee_id_question_id = os.getenv('EMPLOYEE_ID_NUMBER_ID')
-        employee_username = extract_username_from_email(employee_email)
-        #manager_username = extract_username_from_email(manager_email)
-
+        customer_details = {key: 'Not Provided' for key in question_mappings.values()}
 
         # Iterate through custom questions and map answers
         for question in custom_questions:
             question_id = question.get('questionId')
-            answer = question.get('answer')
+            if question_id in question_mappings:
+                customer_details[question_mappings[question_id]] = question.get('answer', 'Not Provided')
 
-            if question_id == employee_manager_question_id:
-                employee_manager = answer
-            elif question_id == employee_manager_phone_question_id:
-                employee_manager_phone = answer
-            elif question_id == employee_name_question_id:
-                employee_name = answer
-            elif question_id == employee_phone_question_id:
-                employee_phone = answer
-            elif question_id == employee_email_question_id:
-                employee_email = answer
-                logger.debug(f"Extracted employee email: {employee_email}")
-            elif question_id == employee_type_question_id:
-                employee_type = answer
-            elif question_id == employee_id_question_id:
-                employee_id = answer
-                   
-                
+               
         # Construct the description from appointment details
-        description = f"<b>Manager Name</b> {employee_manager}<br><b>Manager Phone Number</b> {employee_manager_phone}<br><br><br><b>Name:</b> {employee_name}<br><b>Phone Number:</b> {employee_phone}<br><b>Email:</b> {employee_email}<br><b>Employee Type:</b> {employee_type}<br><br><br><h3>Special Instructions</h3><br> {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}" 
-
-        # Add conditional logging for missing data
-        if employee_name == 'Not Provided':
-            logger.warning("Employee name is missing in appointment data")
-        if employee_email == 'Not Provided':
-            logger.warning("Employee email is missing in appointment data")
-        if employee_phone == 'Not Provided':
-            logger.warning("Employee phone number is missing in appointment data")
-
+        description_parts = [f"<b>{label}</b> {customer_details[key]}" for key, label in {
+            'employee_manager': "Manager Name",
+            'employee_manager_email': "Manager Email",
+            'employee_name': "Name",
+            'employee_phone': "Phone Number",
+            'employee_email': "Email",
+            'employee_type': "Employee Type"
+        }.items()]
+        description_parts.append(f"<h3>Special Instructions</h3><br> {appointment.get('serviceNotes', 'No Additional Notes').split('TeamsMeetingSeparator')[0].strip()}")
+        description = "<br><br>".join(description_parts)
+        
         # Extract the staff member's email or identifier
         booking_staff_member = appointment.get('bookingStaffMember')
         staff_email = booking_staff_member.get('customerEmailAddress') if booking_staff_member else None
@@ -246,7 +293,20 @@ def map_appointment_to_service_request(appointment):
             agent_id = map_staff_id_to_agent_id(staff_member_id)
         else:
             logger.warning("No staff member ID found in the appointment")
-            
+
+        # Extracting username from employee's email
+        employee_username = extract_username_from_email(customer_details['employee_email'])
+
+        # Fetch requester_id based on employee email
+        requester_id = None
+        if employee_username:
+            requester_id = find_user_id(employee_username)
+            if not requester_id:
+                logger.warning(f"Could not find requester_id for username: {employee_username}")
+            else:
+                logger.warning("Employee username could not be extracted from email")
+        
+        # Contructing the service request with the new requester ID
         service_request = {
             'ticket': {
                 'title': appointment.get('serviceName'),
@@ -259,10 +319,7 @@ def map_appointment_to_service_request(appointment):
                     '75': appointment.get('id'),  # Microsoft Bookings appointment ID
                 },
                 'agent_id': agent_id,
-                'requester': {
-                    "username": employee_username
-                    
-                }
+                'requester_id': requester_id      
             }
         }
         
@@ -286,6 +343,8 @@ def main():
 
             # Fetch existing tickets to check against new appointments
             existing_tickets = get_existing_tickets()
+            for ticket in existing_tickets:
+                logger.debug(f"Existing tickets data: {ticket}")
             existing_appointment_ids = {ticket['custom_fields']['appointment_id'] for ticket in existing_tickets}
 
             new_appointments = get_new_appointments()
@@ -306,7 +365,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
 
