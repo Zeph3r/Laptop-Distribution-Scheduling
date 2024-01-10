@@ -5,8 +5,10 @@ import certifi
 import sys
 import time
 import json
+import concurrent.futures
 from datetime import datetime
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor
 from requests.exceptions import HTTPError, ConnectionError, Timeout, JSONDecodeError
 
 #Implementing logging into script to handle log messages. Writes the logs to a file named integration.log
@@ -55,33 +57,45 @@ if not BOSSDESK_API_KEY:
     sys.exit(1)
 
 
+
+def get_ticket_details(ticket_id, headers):
+    try:
+        ticket_detail_url = f"{BOSSDESK_API_ENDPOINT}/tickets/{ticket_id}"
+        response = requests.get(ticket_detail_url, headers=headers, verify=False)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        logger.error(f"Error fetching ticket {ticket_id}: {e}")
+        return None
+
 # Function to get existing tickets from BOSSDesk
 def get_existing_tickets():
-    # Set up the headers for the request to BOSSDesk API
     headers = {
         'Authorization': f'Bearer {BOSSDESK_API_KEY}',
         'Content-Type': 'application/json'
     }
     
-    # Define the URL to get tickets
-    url = f"{BOSSDESK_API_ENDPOINT}/tickets"
-    
+    filter_url = f"{BOSSDESK_API_ENDPOINT}/tickets?q[title_eq]=IT%20support"
     try:
-        response = requests.get(url, headers=headers, verify=False)
-        response.raise_for_status()
-        
-        logger.debug(f"Raw response from BOSSDesk API: {response.json()}")
+        filter_response = requests.get(filter_url, headers=headers, verify=False)
+        filter_response.raise_for_status()
+        filtered_tickets = filter_response.json()
 
-        tickets = response.json()
-        existing_appointment_ids = {ticket['custom_fields']['75'] for ticket in tickets if 'custom_fields' in ticket and isinstance(ticket['custom_fields'], dict) and '75' in ticket['custom_fields']}
+        existing_appointment_ids = set()
 
-        # Verbose logging of API response
-        logger.info(f"BOSSDesk API Response: {response.text}")
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            futures = [executor.submit(get_ticket_details, ticket['id'], headers) for ticket in filtered_tickets]
+            for future in concurrent.futures.as_completed(futures):
+                ticket_details = future.result()
+                if ticket_details:
+                    booking_id = ticket_details.get('custom_fields', {}).get('75')
+                    if booking_id:
+                        existing_appointment_ids.add(booking_id)
 
         return existing_appointment_ids
-    
+
     except requests.RequestException as e:
-        logger.error(f"Error getting existing tickets: {e}")
+        logger.error(f"Error fetching and processing tickets: {e}")
         return set()
 
 
@@ -121,24 +135,7 @@ def get_new_appointments():
     except requests.RequestException as e:
         logger.error(f"Error getting appointments: {e}")
         return [] # Ensures a list is returned even in case of an exception
-'''
-def update_ticket_requester(ticket_id, requester_username):
-    headers = {
-        'Authorization': f'Bearer {BOSSDESK_API_KEY}',
-        'Content-Type': 'application/json'
-    }
-    url = f"{BOSSDESK_API_ENDPOINT}/tickets/{ticket_id}"
 
-    update_payload = {"requester": {"username": requester_username}}
-
-    try:
-        response = requests.patch(url, headers=headers, json=update_payload)
-        logger.info(f"PATCH request sent to {url} with payload: {update_payload}")
-        response.raise_for_status()
-        logger.info(f"Successfully updated requester for ticket ID {ticket_id}. Response: {response.status_code}, {response.text}")
-    except requests.RequestException as e:
-        logger.error(f"Error updating requester for ticket ID {ticket_id}: {e}, Response: {response.status_code}, {response.text}")
-'''
 
 # Function to create a service request in BOSSDesk
 def create_service_request(appointment):
@@ -324,7 +321,6 @@ def map_appointment_to_service_request(appointment):
         }
         
 
-
     except Exception as e:
         logger.error(f"Error mapping appointment to service request: {e}")
         return None
@@ -332,20 +328,16 @@ def map_appointment_to_service_request(appointment):
         return service_request
 
 
-
 # Main integration logic
 def main():
-    iteration_count = 0 #Keeps track of iterations
+    iteration_count = 0
     while True:
         iteration_count += 1
         try:
             logger.info(f"Starting iteration {iteration_count} of integration logic")
 
-            # Fetch existing tickets to check against new appointments
-            existing_tickets = get_existing_tickets()
-            for ticket in existing_tickets:
-                logger.debug(f"Existing tickets data: {ticket}")
-            existing_appointment_ids = {ticket['custom_fields']['appointment_id'] for ticket in existing_tickets}
+            # Fetch existing booking IDs to check against new appointments
+            existing_appointment_ids = get_existing_tickets()
 
             new_appointments = get_new_appointments()
             logger.info(f"Retrieved {len(new_appointments)} new appointments")
@@ -361,7 +353,7 @@ def main():
         finally:
             logger.info(f"Ending iteration {iteration_count} of integration logic")
 
-        time.sleep(300) #Introduces a 5-minute delay between iterations
+        time.sleep(300)  # Introduces a 5-minute delay between iterations
 
 if __name__ == "__main__":
     main()
